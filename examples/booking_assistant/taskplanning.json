@@ -1,0 +1,70 @@
+[
+    {
+        "task_name": "Provide details of upcoming events at the Irish Repertory Theatre",
+        "steps": [
+            "Provide details of upcoming events at the Irish Repertory Theatre"
+        ]
+    },
+    {
+        "task_name": "Assist in checking ticket availability for a specific show",
+        "steps": [
+            "Assist in checking ticket availability for a specific show"
+        ]
+    },
+    {
+        "task_name": "Help the user complete the ticket booking process",
+        "steps": [
+            "Greet the user and inquire about the event they are interested in booking tickets for.",
+            "Provide information about the available shows for the specified event, including dates, times, and venues.",
+            "Ask the user to specify the date and time they wish to attend, as well as the number of tickets they need.",
+            "Confirm the details provided by the user and check for ticket availability based on the user's request.",
+            "If tickets are available, provide pricing information and guide the user through the payment and booking process."
+        ]
+    },
+    {
+        "task_name": "Provide information about the venue including location and layout",
+        "steps": [
+            "Provide information about the venue including location and layout"
+        ]
+    },
+    {
+        "task_name": "Provide personalized show recommendations based on user preferences",
+        "steps": [
+            "Inquire about the user's interests, such as preferred genres, types of shows (e.g., theater, concerts, sports), and any specific artists or performers they like.",
+            "Ask the user for their preferred dates or any specific events they are considering to help narrow down the recommendations.",
+            "Provide a curated list of shows that match the user's preferences based on the information received.",
+            "Ask the user if they would like additional details about any specific show or if they have other preferences to consider.",
+            "Confirm if the user is ready to proceed with booking tickets for a selected show or if they need further assistance.",
+            "If the user confirms the booking, book the show in the database",
+            ""
+        ]
+    },
+    {
+        "task_name": "Provide information about special rates for tickets and memberships",
+        "steps": [
+            "Provide information about special rates for tickets and memberships"
+        ]
+    },
+    {
+        "task_name": "Explain the benefits and process of becoming a member at the Irish Repertory Theatre",
+        "steps": [
+            "Explain the benefits and process of becoming a member at the Irish Repertory Theatre"
+        ]
+    },
+    {
+        "task_name": "Assist the user in purchasing gift cards or gift memberships",
+        "steps": [
+            "Greet the user and inquire if they are interested in purchasing a gift card or gift membership.",
+            "Ask the user for any specific amount or type they are considering for the gift card or membership.",
+            "Provide information about available gift card amounts or membership options based on the user's input.",
+            "Inquire if the user would like to add a personal message or specify the recipient for the gift card or membership.",
+            "Confirm the details of the gift card or membership, and guide the user through the payment process."
+        ]
+    },
+    {
+        "task_name": "Provide information about health and safety measures in place at the theatre",
+        "steps": [
+            "Provide information about health and safety measures in place at the theatre"
+        ]
+    }
+]

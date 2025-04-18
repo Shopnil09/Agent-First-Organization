@@ -1,0 +1,95 @@
+[
+    {
+        "task_name": "Provide information on prescription medications",
+        "steps": [
+            "Ask the user to specify the prescription medication they need information about.",
+            "Retrieve detailed information about the specified prescription medication using FaissRAGWorker, including its uses, side effects, and any relevant policies.",
+            "Provide the user with comprehensive details about the medication and ask if they have any specific questions or need clarification on any point.",
+            "Inquire if the user needs assistance with related topics, such as dosage instructions, refills, or interactions with other medications.",
+            "Confirm if the user requires any further help or if they are satisfied with the information provided."
+        ]
+    },
+    {
+        "task_name": "Assist with prescription refills",
+        "steps": [
+            "Ask the user for their prescription details, such as the medication name and any other identification needed.",
+            "Retrieve and confirm the user's prescription status and refill eligibility using internal documentation.",
+            "Inform the user about the status of their prescribed medication and whether a refill is possible.",
+            "If refill is available, ask the user to confirm if they would like to proceed with the refill process.",
+            "Provide the user with instructions on how to complete the refill request or any additional steps needed."
+        ]
+    },
+    {
+        "task_name": "Provide information on over-the-counter products",
+        "steps": [
+            "Initiate the conversation by greeting the user and asking what specific over-the-counter product or category they are interested in.",
+            "Based on the user's response, utilize FaissRAGWorker to retrieve relevant information regarding the specified over-the-counter products, including benefits and usage.",
+            "Present the retrieved information to the user in a clear and concise manner, ensuring that key details are highlighted for easy understanding.",
+            "Ask the user if they have further questions regarding the products or if they would like recommendations based on specific needs (e.g., symptoms, age group, etc.).",
+            "Address any additional questions from the user or provide tailored product recommendations based on their needs, using the FaissRAGWorker to support your responses.",
+            "Confirm with the user if they require assistance with any transactions related to the products or if they need help understanding the purchase process."
+        ]
+    },
+    {
+        "task_name": "Provide information on health insurance plans",
+        "steps": [
+            "Ask the user what specific information they are looking for regarding health insurance plans (e.g., coverage details, pricing, eligibility).",
+            "Based on the user's input, retrieve relevant information from the internal documentation about health insurance plans to provide accurate answers.",
+            "Deliver the information to the user, summarizing key aspects of the health insurance plans that pertain to their inquiry.",
+            "Ask the user if they have any further questions or if they need clarification on any aspect of the health insurance plans.",
+            "If the user has more questions, repeat the process of providing detailed answers until all inquiries are addressed. If not, offer to assist with any next steps regarding enrollment or further services."
+        ]
+    },
+    {
+        "task_name": "Assist in finding a MinuteClinic location",
+        "steps": [
+            "Assist in finding a MinuteClinic location"
+        ]
+    },
+    {
+        "task_name": "Assist with scheduling appointments",
+        "steps": [
+            "Inquire about the type of appointment the user wants to schedule (e.g., general consultation, follow-up visit).",
+            "Ask the user for their preferred date and time for the appointment.",
+            "Check the availability of appointments based on the user's input and provide available options.",
+            "Confirm the user's choice of appointment time and date, and ask if they would like to provide any additional information or preferences.",
+            "Provide the user with confirmation of the appointment details and any necessary instructions for the visit."
+        ]
+    },
+    {
+        "task_name": "Assist with billing inquiries",
+        "steps": [
+            "Greet the user and inquire about the specific billing issue they are facing or the specific question they have regarding their billing.",
+            "Utilize FaissRAGWorker to retrieve relevant information from internal documentation regarding billing policies, FAQs, and procedures related to the user's inquiry.",
+            "Provide the user with a clear and concise response based on the information retrieved, ensuring the details are relevant to their specific situation.",
+            "Ask the user if they need further clarification on the billing issue or if they have any additional questions related to billing.",
+            "Confirm with the user if their billing inquiry has been resolved or if they require further assistance, and guide them on how to proceed if necessary."
+        ]
+    },
+    {
+        "task_name": "Provide information on pharmacy policies",
+        "steps": [
+            "Provide information on pharmacy policies"
+        ]
+    },
+    {
+        "task_name": "Provide information on health and wellness programs",
+        "steps": [
+            "Inquire about the user's specific interests or needs in health and wellness programs (e.g., fitness, nutrition, mental health).",
+            "Retrieve and present detailed information about health and wellness programs that match the user's interests.",
+            "Ask if the user needs more details about a specific program or if they have additional questions.",
+            "Confirm if the user is satisfied with the information provided or if they require further assistance.",
+            "Provide options for next steps, such as enrolling in a program or accessing additional resources."
+        ]
+    },
+    {
+        "task_name": "Provide information on vaccination services",
+        "steps": [
+            "Inquire about the user's specific questions or concerns regarding vaccination services to understand their needs.",
+            "Utilize the FaissRAGWorker to retrieve relevant information regarding vaccination services from internal documentation, including policies, FAQs, and offered services.",
+            "Present the retrieved information to the user in a clear and concise manner, ensuring all relevant details are covered.",
+            "Ask if the user has any follow-up questions or needs clarification on the provided information.",
+            "Address the user's follow-up questions or provide additional information as needed, ensuring the user's concerns are fully resolved."
+        ]
+    }
+]

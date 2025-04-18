@@ -1,0 +1,74 @@
+[
+    {
+        "task_name": "Provide information on upcoming race schedules",
+        "steps": [
+            "Greet the user and ask if they are looking for specific races or just general information about upcoming Formula 1 races.",
+            "If the user provides a specific race, inquire for more details like the city or country. If the user wants general information, confirm that you will provide the complete schedule of the next races.",
+            "Deliver the upcoming race schedules based on the user's input, including dates, locations, and any notable drivers or teams.",
+            "Ask the user if they would like to receive information about specific teams or drivers participating in those races.",
+            "Wrap up by confirming if the user needs any further information or assistance regarding the races, teams, or drivers."
+        ]
+    },
+    {
+        "task_name": "Provide information on recent race results",
+        "steps": [
+            "Provide information on recent race results"
+        ]
+    },
+    {
+        "task_name": "Provide statistics and information about individual drivers",
+        "steps": [
+            "Ask the user which driver's statistics or information they would like to know more about.",
+            "Retrieve and present the requested statistics and information about the specified driver.",
+            "Inquire if the user needs additional details about the driver, such as their team, race history, or standings.",
+            "Provide the additional information requested by the user regarding the driver's team or race history.",
+            "Ask the user if they have any other questions about different drivers or teams."
+        ]
+    },
+    {
+        "task_name": "Provide information about F1 teams and their profiles",
+        "steps": [
+            "Ask the user what specific information they are looking for regarding F1 teams, such as team history, current standings, or driver statistics.",
+            "Based on the user's response, provide a brief overview of the selected F1 team, including notable achievements, current drivers, and any recent news.",
+            "Ask the user if they would like more detailed information about the team's performance, the drivers' stats, or any specific events related to the team.",
+            "If the user requests more information, provide it, including performance metrics, race results, or historical context as relevant.",
+            "Inquire if the user has any further questions about other teams, races, or any other F1-related topics they want to explore."
+        ]
+    },
+    {
+        "task_name": "Provide details and descriptions of race circuits",
+        "steps": [
+            "Provide details and descriptions of race circuits"
+        ]
+    },
+    {
+        "task_name": "Provide information on current driver and constructor standings",
+        "steps": [
+            "Inquire if the user is looking for current driver standings, constructor standings, or both.",
+            "Provide the current standings based on the user's preference, including details such as points, rankings, and any notable statistics.",
+            "Ask if the user wants more detailed information about specific drivers or constructors.",
+            "Offer to provide information about upcoming races or related topics if the user is interested.",
+            "Confirm if the user has any other questions or needs assistance with anything else."
+        ]
+    },
+    {
+        "task_name": "Provide historical data on past races and results",
+        "steps": [
+            "Ask the user which specific past race or season they are interested in exploring.",
+            "Provide information about the selected race, including the date, location, and key highlights.",
+            "Share the results of the race, including the top finishers and any notable events that occurred during the race.",
+            "Inquire if the user would like more details on any specific driver or team from that race.",
+            "Offer additional historical data or information on other races, or ask if the user has any other questions about Formula 1."
+        ]
+    },
+    {
+        "task_name": "Provide latest news and updates from the Formula 1 world",
+        "steps": [
+            "Inquire if the user is looking for specific news or general updates in the Formula 1 world.",
+            "Based on the user's response, provide the latest news or updates relevant to their interest (e.g., race results, driver changes, team announcements).",
+            "Ask the user if they would like more details on any specific news item or additional topics related to Formula 1.",
+            "If the user has requested more details, provide the requested information and check if there are any other queries related to Formula 1.",
+            "Thank the user for their engagement and offer to assist with any more questions they may have about Formula 1."
+        ]
+    }
+]

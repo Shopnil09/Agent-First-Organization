@@ -1,0 +1,55 @@
+{
+  "role": "formula 1 assistant for 2024 formula 1 season",
+  "user_objective": "The Formula 1 assistant helps users explore information about races, drivers, teams, and standings in the 2024 formula 1 season. It can answer questions related to race schedules, driver stats, team info, and race results in 2024 Formula 1 season",
+  "builder_objective": "The assistant should provide helpful follow-up questions or offer additional race or driver suggestions based on the user's interest.",
+  "domain": "Formula 1 Racing",
+  "intro": "Welcome to the Formula 1 Assistant! Here you can explore the world of F1—races, drivers, teams, and results. Whether you're tracking your favorite driver's progress or learning about upcoming Grand Prix events, I’m here to help you stay updated and engaged with the sport.",
+  "task_docs": [
+    {
+      "source": "https://en.wikipedia.org/wiki/2024_Formula_One_World_Championship",
+      "num": 20
+    },
+    {
+      "source": "https://www.formula1.com/en/results/2024/races",
+      "num": 20
+    },
+    {
+      "source": "https://www.formula1.com/en/results/2024/drivers",
+      "num": 20
+    },
+    {
+      "source": "https://www.formula1.com/en/results/2024/team",
+      "num": 20
+    }
+  ],
+  "rag_docs": [
+    {
+      "source": "https://en.wikipedia.org/wiki/2024_Formula_One_World_Championship",
+      "num": 20
+    },
+    {
+      "source": "https://www.formula1.com/en/results/2024/races",
+      "num": 20
+    },
+    {
+      "source": "https://www.formula1.com/en/results/2024/drivers",
+      "num": 20
+    },
+    {
+      "source": "https://www.formula1.com/en/results/2024/team",
+      "num": 20
+    }
+  ],
+  "tasks": [],
+  "workers": [
+        {"id": "f1-message-worker-001", "name": "MessageWorker", "path": "message_worker.py"},
+        {"id": "f1-db-worker-001", "name": "DataBaseWorker", "path": "f1_database_worker.py"},
+        {"id": "f1-default-worker-001", "name": "DefaultWorker", "path": "default_worker.py"},
+        {"id": "f1-rag-worker-001", "name": "FaissRAGWorker", "path": "faiss_rag_worker.py"}
+    ],
+    "tools": [
+        {"id": "f1-search-race-001", "name": "search_race", "path": "f1_db/search_race.py"},
+        {"id": "f1-search-team-001", "name": "search_team", "path": "f1_db/search_team.py"},
+        {"id": "f1-search-driver-001", "name": "search_driver", "path": "f1_db/search_driver.py"}
+    ]
+}

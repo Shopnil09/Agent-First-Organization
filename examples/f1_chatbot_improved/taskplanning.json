@@ -1,0 +1,58 @@
+[
+    {
+        "task_name": "Provide details about race schedules and details about the F1 2024 season",
+        "steps": [
+            "Ask the user if they would like to know about races in the 2024 season.",
+            "If the user is interested in schedules, provide the dates and details of the next three races in the 2024 Formula 1 season.",
+            "If the user is interested in locations, provide information about the circuits and races that took place in the 2024 season.",
+            "Ask the user if they want details on any specific race, such as the timing, historical data, or coverage.",
+            "Confirm if the user needs any further assistance or additional information about races, teams, or drivers."
+        ]
+    },
+    {
+        "task_name": "Provide performance statistics for a specific driver in the 2024 season",
+        "steps": [
+            "Ask the user which specific driver's performance statistics they would like to know about in the 2024 Formula 1 season.",
+            "Once the user specifies a driver, confirm their choice and retrieve the latest performance statistics for that driver from the relevant sources.",
+            "Provide the user with the detailed performance statistics, including key metrics such as race finishes, points scored, and overall standings for the specified driver.",
+            "Ask the user if they need additional information about the driver, such as background, team details, or specific race performances.",
+            "Confirm if the user is satisfied with the information provided or if they have any further questions regarding the 2024 Formula 1 season."
+        ]
+    },
+    {
+        "task_name": "Provide information and standings for a specific team in the 2024 season",
+        "steps": [
+            "Ask the user which Formula 1 team they would like information about.",
+            "Retrieve and present key information about the selected team, including current standings, driver details, and team performance.",
+            "Inquire if the user wants to know more specific details about the team, such as individual driver stats or past race results.",
+            "Provide the additional information requested by the user, or clarify any relevant statistics or standings.",
+            "Ask the user if they need information on any other teams or races in the 2024 season."
+        ]
+    },
+    {
+        "task_name": "Provide results of completed races including winners and race times",
+        "steps": [
+            "Inquire the user about which race results they are interested in, specifying if they want results from a specific race or all completed races so far in the 2024 season.",
+            "Based on the user's input, provide the results of the specified race(s), including the names of the winners and their race times.",
+            "Ask the user if they need additional information about the race, such as lap times, driver stats, or team performances.",
+            "If the user requests more information, provide the details requested or ask for clarification on what specific data they need.",
+            "Confirm with the user if they have any more questions or if they need information about upcoming races."
+        ]
+    },
+    {
+        "task_name": "Provide current standings for drivers and teams in the 2024 season",
+        "steps": [
+            "Provide current standings for drivers and teams in the 2024 season"
+        ]
+    },
+    {
+        "task_name": "Answer frequently asked questions related to Formula 1 and the 2024 season",
+        "steps": [
+            "Ask the user what specific topic or question they have about the 2024 Formula 1 season (e.g., race schedules, driver stats, team information).",
+            "Use the FaissRAGWorker to retrieve specific information based on the user's inquiry regarding the 2024 Formula 1 season.",
+            "Provide the user with the information or answer to their question about the 2024 Formula 1 season.",
+            "Ask if the user has any follow-up questions or if there is anything else related to Formula 1 they would like to know.",
+            "Respond to any additional queries from the user, providing relevant information or navigating them to different topics related to the 2024 Formula 1 season."
+        ]
+    }
+]

@@ -4,11 +4,11 @@
             "0",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Hello! I'm your Customer Service Assistant. How may I assist you with your inquiries today?",
+                    "value": "Welcome to your Formula 1 Assistant! What can I help you explore today? Whether it's race schedules, driver stats, team information, or race results, I'm here to assist you!",
                     "task": "start message",
                     "directed": false
                 },
@@ -20,12 +20,12 @@
             "1",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Which robot model are you interested in?",
-                    "task": "Ask the user to specify which robot model they are interested in.",
+                    "value": "Hello! Are you looking for information about a specific race or would you like general information on upcoming Formula 1 races?",
+                    "task": "Greet the user and ask if they are looking for specific races or just general information about upcoming Formula 1 races.",
                     "directed": false
                 },
                 "limit": 1
@@ -35,12 +35,12 @@
             "2",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Retrieve detailed specifications and features of the specified robot model using the FaissRAGWorker.",
+                    "value": "Could you please provide the city or country of the race you're interested in? If you're looking for general information, I can provide the complete schedule of the next races.",
+                    "task": "If the user provides a specific race, inquire for more details like the city or country. If the user wants general information, confirm that you will provide the complete schedule of the next races.",
                     "directed": false
                 },
                 "limit": 1
@@ -50,12 +50,12 @@
             "3",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
                 },
                 "attribute": {
-                    "value": "The specifications of the robot model you requested are as follows: [insert specifications].",
-                    "task": "Provide the user with the specifications and features of the robot model.",
+                    "value": "The next race is the Monaco Grand Prix on May 28, 2023, located in Monaco. Notable teams participating include Ferrari and Mercedes.",
+                    "task": "Deliver the upcoming race schedules based on the user's input, including dates, locations, and any notable drivers or teams.",
                     "directed": false
                 },
                 "limit": 1
@@ -65,12 +65,12 @@
             "4",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you have any further questions about this robot model or need any additional information?",
-                    "task": "Ask the user if they have any further questions about the robot model or if they need additional information.",
+                    "value": "Would you like to know more about specific teams or drivers participating in this race?",
+                    "task": "Ask the user if they would like to receive information about specific teams or drivers participating in those races.",
                     "directed": false
                 },
                 "limit": 1
@@ -80,12 +80,12 @@
             "5",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "If you have more questions, feel free to ask. If you're satisfied, thank you for your time!",
-                    "task": "If the user has more questions, assist them further, or conclude the interaction if they are satisfied.",
+                    "value": "Is there anything else you need information on regarding the races, teams, or drivers?",
+                    "task": "Wrap up by confirming if the user needs any further information or assistance regarding the races, teams, or drivers.",
                     "directed": false
                 },
                 "limit": 1
@@ -95,12 +95,12 @@
             "6",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
                 },
                 "attribute": {
-                    "value": "Could you please tell me which product or service you are interested in?",
-                    "task": "Inquire about the specific product or service the user is interested in to gather relevant context.",
+                    "value": "The latest race was the Italian Grand Prix, and the results were as follows: 1st place - Charles Leclerc, 2nd place - Lewis Hamilton, and 3rd place - Max Verstappen.",
+                    "task": "Provide information on recent race results.",
                     "directed": false
                 },
                 "limit": 1
@@ -110,12 +110,12 @@
             "7",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "I found the product you mentioned. It is available for $199.99.",
-                    "task": "Utilize FaissRAGWorker to provide the user with price and availability information based on the internal documentation for the requested product or service.",
+                    "value": "Which driver's statistics or information would you like to know more about?",
+                    "task": "Ask the user which driver's statistics or information they would like to know more about.",
                     "directed": false
                 },
                 "limit": 1
@@ -125,12 +125,12 @@
             "8",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-driver-001",
+                    "name": "f1_db-search_driver-search_driver"
                 },
                 "attribute": {
-                    "value": "Would you like more detailed information on the specifications or features of this product?",
-                    "task": "Ask the user if they need more detailed information such as specifications, features, or related products.",
+                    "value": "Here is the information about Lewis Hamilton's statistics for this season.",
+                    "task": "Retrieve and present the requested statistics and information about the specified driver.",
                     "directed": false
                 },
                 "limit": 1
@@ -140,12 +140,12 @@
             "9",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Here are alternate options that may suit your needs: Product A for $179.99 and Product B for $209.99.",
-                    "task": "If requested, provide additional details or alternate options that may suit the user's needs.",
+                    "value": "Do you need any additional details about the driver, like their team or race history?",
+                    "task": "Inquire if the user needs additional details about the driver, such as their team, race history, or standings.",
                     "directed": false
                 },
                 "limit": 1
@@ -155,12 +155,12 @@
             "10",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-team-001",
+                    "name": "f1_db-search_team-search_team"
                 },
                 "attribute": {
-                    "value": "Are you ready to proceed with your purchase, or do you need further assistance?",
-                    "task": "Confirm if the user is ready to make a purchase or if they require further assistance with their inquiry.",
+                    "value": "Lewis Hamilton drives for Mercedes. Would you like to know more about their race history?",
+                    "task": "Provide the additional information requested by the user regarding the driver's team or race history.",
                     "directed": false
                 },
                 "limit": 1
@@ -170,12 +170,12 @@
             "11",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "The rental process for robots includes understanding your needs, selecting a robot type, and completing the necessary paperwork. Key steps involve reviewing rental terms and setting up delivery arrangements.",
-                    "task": "Provide an overview of the rental process for robots, including key steps and important information the user should know.",
+                    "value": "Do you have any other questions about different drivers or teams?",
+                    "task": "Ask the user if they have any other questions about different drivers or teams.",
                     "directed": false
                 },
                 "limit": 1
@@ -185,12 +185,12 @@
             "12",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you have any specific questions about the rental process or need any clarification on certain aspects?",
-                    "task": "Inquire if the user has any specific questions regarding the rental process or if they need clarification on any particular aspect.",
+                    "value": "What specific information are you looking for about F1 teams? Are you interested in their history, current standings, or driver statistics?",
+                    "task": "Ask the user what specific information they are looking for regarding F1 teams, such as team history, current standings, or driver statistics.",
                     "directed": false
                 },
                 "limit": 1
@@ -200,12 +200,12 @@
             "13",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-search-team-001",
+                    "name": "f1_db-search_team-search_team"
                 },
                 "attribute": {
-                    "value": "We offer various types of robots, including service robots for home assistance, industrial robots for manufacturing, and more, each with unique specifications and features tailored to different needs.",
-                    "task": "Share detailed information about the different rental options available for robots, including types, specifications, and any unique features.",
+                    "value": "The Mercedes-AMG Petronas Formula One Team has won multiple Constructors' Championships. Currently, Lewis Hamilton and George Russell are driving for the team.",
+                    "task": "Based on the user's response, provide a brief overview of the selected F1 team, including notable achievements, current drivers, and any recent news.",
                     "directed": false
                 },
                 "limit": 1
@@ -215,12 +215,12 @@
             "14",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Are you interested in a specific type of robot, or would you like help comparing the available options?",
-                    "task": "Ask the user if they are interested in a specific type of robot or if they need assistance in comparing available options.",
+                    "value": "Would you like more detailed information about the team's performance, driver statistics, or specific events related to the team?",
+                    "task": "Ask the user if they would like more detailed information about the team's performance, the drivers' stats, or any specific events related to the team.",
                     "directed": false
                 },
                 "limit": 1
@@ -230,12 +230,12 @@
             "15",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-driver-001",
+                    "name": "f1_db-search_driver-search_driver"
                 },
                 "attribute": {
-                    "value": "Great choice! If you need any additional assistance with the rental process, feel free to ask.",
-                    "task": "Confirm the user's choice and provide any additional assistance needed for completing the rental process.",
+                    "value": "Lewis Hamilton has achieved 100 race wins. In the last season, Mercedes secured 2nd place in the Constructors' Championship.",
+                    "task": "If the user requests more information, provide it, including performance metrics, race results, or historical context as relevant.",
                     "directed": false
                 },
                 "limit": 1
@@ -245,12 +245,12 @@
             "16",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Could you please provide more details about your inquiry or the issue you are facing?",
-                    "task": "Ask the user to specify their inquiry or issue in detail.",
+                    "value": "Do you have any other questions about different F1 teams, races, or any other topics related to Formula 1 that you'd like to explore?",
+                    "task": "Inquire if the user has any further questions about other teams, races, or any other F1-related topics they want to explore.",
                     "directed": false
                 },
                 "limit": 1
@@ -260,12 +260,12 @@
             "17",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Retrieve relevant information based on the user's inquiry from the company's internal documentation using FaissRAGWorker.",
+                    "value": "Here are the details of the Monaco Grand Prix circuit: It's a street circuit that offers a unique challenge with narrow roads and tight corners.",
+                    "task": "Provide details and descriptions of race circuits.",
                     "directed": false
                 },
                 "limit": 1
@@ -275,12 +275,12 @@
             "18",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Here is the information related to your inquiry: [insert relevant information].",
-                    "task": "Present the information or solution to the user, ensuring clarity and relevance to their inquiry.",
+                    "value": "Are you looking for the current driver standings, constructor standings, or both?",
+                    "task": "Inquire if the user is looking for current driver standings, constructor standings, or both.",
                     "directed": false
                 },
                 "limit": 1
@@ -290,12 +290,12 @@
             "19",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-driver-001",
+                    "name": "f1_db-search_driver-search_driver or f1_db-search_team-search_team"
                 },
                 "attribute": {
-                    "value": "Does this information resolve your issue, or do you need any further assistance?",
-                    "task": "Ask the user if the provided information resolves their issue or if they need further assistance.",
+                    "value": "Here are the current driver standings: 1. Lewis Hamilton - 250 points, 2. Max Verstappen - 240 points...",
+                    "task": "Provide the current standings based on the user's preference, including details such as points, rankings, and any notable statistics.",
                     "directed": false
                 },
                 "limit": 1
@@ -305,12 +305,12 @@
             "20",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "If you need more help, you can reach out to our customer support team at [support contact] or visit our help center for additional resources.",
-                    "task": "If the user needs more help, direct them to the appropriate support channels or provide additional resources.",
+                    "value": "Would you like more detailed information about any specific drivers or constructors?",
+                    "task": "Ask if the user wants more detailed information about specific drivers or constructors.",
                     "directed": false
                 },
                 "limit": 1
@@ -320,12 +320,12 @@
             "21",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Could you please tell me the specific type of robot you're interested in or have ordered?",
-                    "task": "Ask the user for the specific type of robot they have ordered or are interested in to gather context.",
+                    "value": "Would you like to know about upcoming races or any related topics?",
+                    "task": "Offer to provide information about upcoming races or related topics if the user is interested.",
                     "directed": false
                 },
                 "limit": 1
@@ -335,12 +335,12 @@
             "22",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to retrieve information related to the delivery times associated with the specified robot type.",
+                    "value": "Do you have any other questions or need assistance with anything else?",
+                    "task": "Confirm if the user has any other questions or needs assistance with anything else.",
                     "directed": false
                 },
                 "limit": 1
@@ -350,12 +350,12 @@
             "23",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "The estimated delivery time for the robot you selected is 5-7 business days with standard shipping.",
-                    "task": "Provide the estimated delivery times based on the user's specified robot type and any relevant conditions (e.g., standard shipping or expedited options).",
+                    "value": "Which past race or season are you interested in exploring?",
+                    "task": "Ask the user which specific past race or season they are interested in exploring.",
                     "directed": false
                 },
                 "limit": 1
@@ -365,12 +365,12 @@
             "24",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
                 },
                 "attribute": {
-                    "value": "Do you need any additional information about shipping options, tracking, or our policies?",
-                    "task": "Inquire if the user needs any additional information about shipping options, tracking, or related policies.",
+                    "value": "The 2020 Belgian Grand Prix took place on August 30 at Circuit de Spa-Francorchamps. Notable highlights include Lewis Hamilton's victory.",
+                    "task": "Provide information about the selected race, including the date, location, and key highlights.",
                     "directed": false
                 },
                 "limit": 1
@@ -380,12 +380,12 @@
             "25",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
                 },
                 "attribute": {
-                    "value": "Do you have all the information you need, or is there anything else I can assist you with regarding your order?",
-                    "task": "Confirm if the user has all the information they need or if they require further assistance regarding their order.",
+                    "value": "The top finishers were Lewis Hamilton, Valtteri Bottas, and Max Verstappen. A major event was the retirement of Charles Leclerc due to a crash.",
+                    "task": "Share the results of the race, including the top finishers and any notable events that occurred during the race.",
                     "directed": false
                 },
                 "limit": 1
@@ -395,12 +395,12 @@
             "26",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Can you please describe the issue you are facing with the product or service?",
-                    "task": "Ask the user to describe the issue they are facing with the product or service.",
+                    "value": "Would you like more information about a specific driver or team from that race?",
+                    "task": "Inquire if the user would like more details on any specific driver or team from that race.",
                     "directed": false
                 },
                 "limit": 1
@@ -410,12 +410,12 @@
             "27",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to search for troubleshooting steps related to the user's described issue.",
+                    "value": "Would you like to know about other races or do you have any other questions about Formula 1?",
+                    "task": "Offer additional historical data or information on other races, or ask if the user has any other questions about Formula 1.",
                     "directed": false
                 },
                 "limit": 1
@@ -425,12 +425,12 @@
             "28",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Here are some steps you can try to resolve this issue: [list of steps].",
-                    "task": "Present the user with the retrieved troubleshooting steps or suggestions to resolve the issue.",
+                    "value": "Are you looking for specific news or general updates about Formula 1?",
+                    "task": "Inquire if the user is looking for specific news or general updates in the Formula 1 world.",
                     "directed": false
                 },
                 "limit": 1
@@ -440,12 +440,12 @@
             "29",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
                 },
                 "attribute": {
-                    "value": "Were you able to resolve the issue using the provided steps, or do you need further assistance?",
-                    "task": "Ask the user if they were able to resolve the issue using the provided steps or need further assistance.",
+                    "value": "Here are the latest race results: [list of race results].",
+                    "task": "Based on the user's response, provide the latest news or updates relevant to their interest (e.g., race results, driver changes, team announcements).",
                     "directed": false
                 },
                 "limit": 1
@@ -455,12 +455,12 @@
             "30",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "It seems like the issue is still present. I will escalate this to our technical support team. You can also reach out to them at [contact information].",
-                    "task": "If the issue persists, escalate the user's issue to technical support or provide them with the relevant contact information.",
+                    "value": "Would you like more details on any specific news item or other topics related to Formula 1?",
+                    "task": "Ask the user if they would like more details on any specific news item or additional topics related to Formula 1.",
                     "directed": false
                 },
                 "limit": 1
@@ -470,12 +470,12 @@
             "31",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "f1-search-driver-001",
+                    "name": "f1_db-search_driver-search_driver"
                 },
                 "attribute": {
-                    "value": "What would you like to know about promotions or discounts for Richtech Robotics products?",
-                    "task": "Ask the user specifically what they would like to know about promotions or discounts related to Richtech Robotics products.",
+                    "value": "Here are the details for the driver you asked about: [driver details]. Do you have any other questions regarding Formula 1?",
+                    "task": "If the user has requested more details, provide the requested information and check if there are any other queries related to Formula 1.",
                     "directed": false
                 },
                 "limit": 1
@@ -485,57 +485,12 @@
             "32",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
-                },
-                "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to retrieve information about current promotions or discounts, based on the user's inquiry.",
-                    "directed": false
-                },
-                "limit": 1
-            }
-        ],
-        [
-            "33",
-            {
-                "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "id": "f1-message-worker-001",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Currently, we have a 20% discount on the Richtech Robotics Pro model and a buy one get one free offer on select items. Would you like more details?",
-                    "task": "Present the user with the details of ongoing promotions or discounts available for Richtech Robotics products.",
-                    "directed": false
-                },
-                "limit": 1
-            }
-        ],
-        [
-            "34",
-            {
-                "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
-                },
-                "attribute": {
-                    "value": "Do you need more information or assistance with any specific promotion or discount?",
-                    "task": "Inquire if the user would like more information or assistance regarding a specific promotion or discount.",
-                    "directed": false
-                },
-                "limit": 1
-            }
-        ],
-        [
-            "35",
-            {
-                "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
-                },
-                "attribute": {
-                    "value": "Do you have any other questions or need further assistance regarding promotions or any other inquiries?",
-                    "task": "Confirm if the user has any additional questions or requires further assistance related to promotions or other customer service inquiries.",
+                    "value": "Thank you for engaging with us! If you have any more questions about Formula 1, feel free to ask.",
+                    "task": "Thank the user for their engagement and offer to assist with any more questions they may have about Formula 1.",
                     "directed": false
                 },
                 "limit": 1
@@ -547,7 +502,7 @@
             "0",
             "1",
             {
-                "intent": "User wants information about a specific robot model",
+                "intent": "User wants to know about upcoming races",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -612,7 +567,7 @@
             "0",
             "6",
             {
-                "intent": "User inquires about purchasing options",
+                "intent": "User has questions about race results",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -622,13 +577,13 @@
             }
         ],
         [
-            "6",
+            "0",
             "7",
             {
-                "intent": "None",
+                "intent": "User is interested in driver statistics",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -674,26 +629,26 @@
             }
         ],
         [
-            "0",
+            "10",
             "11",
             {
-                "intent": "User wants to inquire about robot rentals",
+                "intent": "None",
                 "attribute": {
                     "weight": 1,
-                    "pred": true,
+                    "pred": false,
                     "definition": "",
                     "sample_utterances": []
                 }
             }
         ],
         [
-            "11",
+            "0",
             "12",
             {
-                "intent": "None",
+                "intent": "User wants to learn about teams",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -739,10 +694,23 @@
             }
         ],
         [
-            "0",
+            "15",
             "16",
             {
-                "intent": "User has a question or issue related to customer service",
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "17",
+            {
+                "intent": "User seeks information on circuit details",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -752,26 +720,13 @@
             }
         ],
         [
-            "16",
-            "17",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "17",
+            "0",
             "18",
             {
-                "intent": "None",
+                "intent": "User wants to know current standings",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -804,39 +759,39 @@
             }
         ],
         [
-            "0",
+            "20",
             "21",
             {
-                "intent": "User wants to know the delivery times for a specific robot",
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "21",
+            "22",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "23",
+            {
+                "intent": "User is interested in historical race data",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "21",
-            "22",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "22",
-            "23",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -869,39 +824,39 @@
             }
         ],
         [
-            "0",
+            "25",
             "26",
             {
-                "intent": "User needs technical support for a robot they purchased",
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "26",
+            "27",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "28",
+            {
+                "intent": "User wants news updates related to F1",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "26",
-            "27",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "27",
-            "28",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -934,13 +889,13 @@
             }
         ],
         [
-            "0",
+            "30",
             "31",
             {
-                "intent": "User wants information on the latest promotions or deals",
+                "intent": "None",
                 "attribute": {
                     "weight": 1,
-                    "pred": true,
+                    "pred": false,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -949,45 +904,6 @@
         [
             "31",
             "32",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "32",
-            "33",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "33",
-            "34",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "34",
-            "35",
             {
                 "intent": "None",
                 "attribute": {
@@ -999,42 +915,47 @@
             }
         ]
     ],
-    "role": "customer service assistant",
-    "user_objective": "The customer service assistant helps users with customer service inquiries. It can provide information about products, services, and policies, as well as help users resolve issues and complete transactions.",
-    "builder_objective": "The customer service assistant helps to request customer's contact information.",
-    "domain": "robotics and automation",
-    "intro": "Richtech Robotics's headquarter is in Las Vegas; the other office is in Austin. Richtech Robotics provide worker robots (ADAM, ARM, ACE), delivery robots (Matradee, Matradee X, Matradee L, Richie), cleaning robots (DUST-E SX, DUST-E MX) and multipurpose robots (skylark). Their products are intended for business purposes, but not for home purpose; the ADAM robot is available for purchase and rental for multiple purposes. This robot bartender makes tea, coffee and cocktails. Richtech Robotics also operate the world's first robot milk tea shop, ClouTea, in Las Vegas (www.cloutea.com), where all milk tea beverages are prepared by the ADAM robot. The delivery time will be one month for the delivery robot, 2 weeks for standard ADAM, and two months for commercial cleaning robot. ",
-    "task_docs": [
-        {
-            "source": "https://www.richtechrobotics.com/",
-            "num": 20
-        }
-    ],
-    "rag_docs": [
-        {
-            "source": "https://www.richtechrobotics.com/",
-            "num": 20
-        }
-    ],
+    "role": "formula 1 assistant",
+    "user_objective": "The Formula 1 assistant helps users explore information about races, drivers, teams, and standings. It can answer questions related to race schedules, driver stats, team info, and race results.",
+    "builder_objective": "The assistant should provide helpful follow-up questions or offer additional race or driver suggestions based on the user's interest.",
+    "domain": "Formula 1 Racing",
+    "intro": "Welcome to the Formula 1 Assistant! Here you can explore the world of F1\u2014races, drivers, teams, circuits, and results. Whether you're tracking your favorite driver's progress or learning about upcoming Grand Prix events, I\u2019m here to help you stay updated and engaged with the sport.",
+    "task_docs": [],
     "tasks": [],
     "workers": [
         {
-            "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-            "name": "FaissRAGWorker",
-            "path": "faiss_rag_worker.py"
-        },
-        {
-            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "id": "f1-message-worker-001",
             "name": "MessageWorker",
             "path": "message_worker.py"
         },
         {
-            "id": "9c15af81-04b3-443e-be04-a3522124b905",
-            "name": "SearchWorker",
-            "path": "search_worker.py"
+            "id": "f1-db-worker-001",
+            "name": "DataBaseWorker",
+            "path": "f1_database_worker.py"
+        },
+        {
+            "id": "f1-default-worker-001",
+            "name": "DefaultWorker",
+            "path": "default_worker.py"
         }
     ],
-    "tools": [],
+    "tools": [
+        {
+            "id": "f1-search-race-001",
+            "name": "search_race",
+            "path": "f1_db/search_race.py"
+        },
+        {
+            "id": "f1-search-team-001",
+            "name": "search_team",
+            "path": "f1_db/search_team.py"
+        },
+        {
+            "id": "f1-search-driver-001",
+            "name": "search_driver",
+            "path": "f1_db/search_driver.py"
+        }
+    ],
     "nluapi": "",
     "slotfillapi": ""
 }

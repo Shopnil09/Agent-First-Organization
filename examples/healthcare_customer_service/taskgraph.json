@@ -8,7 +8,7 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Hello! I'm your Customer Service Assistant. How may I assist you with your inquiries today?",
+                    "value": "Hello and welcome to our Healthcare Customer Service Assistant! I'm here to help you with any inquiries you may have about our products, services, and policies. How can I assist you today?",
                     "task": "start message",
                     "directed": false
                 },
@@ -24,8 +24,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Which robot model are you interested in?",
-                    "task": "Ask the user to specify which robot model they are interested in.",
+                    "value": "Could you please specify the prescription medication you would like to get information about?",
+                    "task": "Ask the user to specify the prescription medication they need information about.",
                     "directed": false
                 },
                 "limit": 1
@@ -40,7 +40,7 @@
                 },
                 "attribute": {
                     "value": "",
-                    "task": "Retrieve detailed specifications and features of the specified robot model using the FaissRAGWorker.",
+                    "task": "Retrieve detailed information about the specified prescription medication using FaissRAGWorker, including its uses, side effects, and any relevant policies.",
                     "directed": false
                 },
                 "limit": 1
@@ -54,8 +54,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "The specifications of the robot model you requested are as follows: [insert specifications].",
-                    "task": "Provide the user with the specifications and features of the robot model.",
+                    "value": "Here are the details about the medication you've asked for. Do you have any specific questions or need clarification on any point?",
+                    "task": "Provide the user with comprehensive details about the medication and ask if they have any specific questions or need clarification on any point.",
                     "directed": false
                 },
                 "limit": 1
@@ -69,8 +69,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you have any further questions about this robot model or need any additional information?",
-                    "task": "Ask the user if they have any further questions about the robot model or if they need additional information.",
+                    "value": "Do you need assistance with related topics, such as dosage instructions, refills, or interactions with other medications?",
+                    "task": "Inquire if the user needs assistance with related topics, such as dosage instructions, refills, or interactions with other medications.",
                     "directed": false
                 },
                 "limit": 1
@@ -84,8 +84,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "If you have more questions, feel free to ask. If you're satisfied, thank you for your time!",
-                    "task": "If the user has more questions, assist them further, or conclude the interaction if they are satisfied.",
+                    "value": "Are you satisfied with the information provided or do you require any further help?",
+                    "task": "Confirm if the user requires any further help or if they are satisfied with the information provided.",
                     "directed": false
                 },
                 "limit": 1
@@ -99,8 +99,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Could you please tell me which product or service you are interested in?",
-                    "task": "Inquire about the specific product or service the user is interested in to gather relevant context.",
+                    "value": "Could you please provide me with your prescription details, including the medication name and any identification needed?",
+                    "task": "Ask the user for their prescription details, such as the medication name and any other identification needed.",
                     "directed": false
                 },
                 "limit": 1
@@ -114,8 +114,8 @@
                     "name": "FaissRAGWorker"
                 },
                 "attribute": {
-                    "value": "I found the product you mentioned. It is available for $199.99.",
-                    "task": "Utilize FaissRAGWorker to provide the user with price and availability information based on the internal documentation for the requested product or service.",
+                    "value": "",
+                    "task": "Retrieve and confirm the user's prescription status and refill eligibility using internal documentation.",
                     "directed": false
                 },
                 "limit": 1
@@ -129,8 +129,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Would you like more detailed information on the specifications or features of this product?",
-                    "task": "Ask the user if they need more detailed information such as specifications, features, or related products.",
+                    "value": "Your prescribed medication is currently in stock and you are eligible for a refill.",
+                    "task": "Inform the user about the status of their prescribed medication and whether a refill is possible.",
                     "directed": false
                 },
                 "limit": 1
@@ -140,12 +140,12 @@
             "9",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Here are alternate options that may suit your needs: Product A for $179.99 and Product B for $209.99.",
-                    "task": "If requested, provide additional details or alternate options that may suit the user's needs.",
+                    "value": "Would you like to proceed with the refill request for your medication?",
+                    "task": "If refill is available, ask the user to confirm if they would like to proceed with the refill process.",
                     "directed": false
                 },
                 "limit": 1
@@ -159,8 +159,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Are you ready to proceed with your purchase, or do you need further assistance?",
-                    "task": "Confirm if the user is ready to make a purchase or if they require further assistance with their inquiry.",
+                    "value": "To complete your refill request, please visit our website and follow the instructions provided in your account.",
+                    "task": "Provide the user with instructions on how to complete the refill request or any additional steps needed.",
                     "directed": false
                 },
                 "limit": 1
@@ -170,12 +170,12 @@
             "11",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "The rental process for robots includes understanding your needs, selecting a robot type, and completing the necessary paperwork. Key steps involve reviewing rental terms and setting up delivery arrangements.",
-                    "task": "Provide an overview of the rental process for robots, including key steps and important information the user should know.",
+                    "value": "Hello! What specific over-the-counter product or category are you interested in today?",
+                    "task": "Initiate the conversation by greeting the user and asking what specific over-the-counter product or category they are interested in.",
                     "directed": false
                 },
                 "limit": 1
@@ -185,12 +185,12 @@
             "12",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
                 },
                 "attribute": {
-                    "value": "Do you have any specific questions about the rental process or need any clarification on certain aspects?",
-                    "task": "Inquire if the user has any specific questions regarding the rental process or if they need clarification on any particular aspect.",
+                    "value": "",
+                    "task": "Based on the user's response, utilize FaissRAGWorker to retrieve relevant information regarding the specified over-the-counter products, including benefits and usage.",
                     "directed": false
                 },
                 "limit": 1
@@ -200,12 +200,12 @@
             "13",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "We offer various types of robots, including service robots for home assistance, industrial robots for manufacturing, and more, each with unique specifications and features tailored to different needs.",
-                    "task": "Share detailed information about the different rental options available for robots, including types, specifications, and any unique features.",
+                    "value": "Here are the benefits and usage details for the product you asked about: [details].",
+                    "task": "Present the retrieved information to the user in a clear and concise manner, ensuring that key details are highlighted for easy understanding.",
                     "directed": false
                 },
                 "limit": 1
@@ -219,8 +219,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Are you interested in a specific type of robot, or would you like help comparing the available options?",
-                    "task": "Ask the user if they are interested in a specific type of robot or if they need assistance in comparing available options.",
+                    "value": "Do you have any further questions about these products, or would you like recommendations based on specific needs?",
+                    "task": "Ask the user if they have further questions regarding the products or if they would like recommendations based on specific needs (e.g., symptoms, age group, etc.).",
                     "directed": false
                 },
                 "limit": 1
@@ -230,12 +230,12 @@
             "15",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
                 },
                 "attribute": {
-                    "value": "Great choice! If you need any additional assistance with the rental process, feel free to ask.",
-                    "task": "Confirm the user's choice and provide any additional assistance needed for completing the rental process.",
+                    "value": "Based on your needs, I recommend the following products: [recommendations].",
+                    "task": "Address any additional questions from the user or provide tailored product recommendations based on their needs, using the FaissRAGWorker to support your responses.",
                     "directed": false
                 },
                 "limit": 1
@@ -249,8 +249,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Could you please provide more details about your inquiry or the issue you are facing?",
-                    "task": "Ask the user to specify their inquiry or issue in detail.",
+                    "value": "Do you need assistance with any transactions related to these products, or would you like help understanding the purchase process?",
+                    "task": "Confirm with the user if they require assistance with any transactions related to the products or if they need help understanding the purchase process.",
                     "directed": false
                 },
                 "limit": 1
@@ -260,12 +260,12 @@
             "17",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Retrieve relevant information based on the user's inquiry from the company's internal documentation using FaissRAGWorker.",
+                    "value": "What specific information are you looking for regarding health insurance plans?",
+                    "task": "Ask the user what specific information they are looking for regarding health insurance plans (e.g., coverage details, pricing, eligibility).",
                     "directed": false
                 },
                 "limit": 1
@@ -275,12 +275,12 @@
             "18",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
                 },
                 "attribute": {
-                    "value": "Here is the information related to your inquiry: [insert relevant information].",
-                    "task": "Present the information or solution to the user, ensuring clarity and relevance to their inquiry.",
+                    "value": "",
+                    "task": "Based on the user's input, retrieve relevant information from the internal documentation about health insurance plans to provide accurate answers.",
                     "directed": false
                 },
                 "limit": 1
@@ -294,8 +294,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Does this information resolve your issue, or do you need any further assistance?",
-                    "task": "Ask the user if the provided information resolves their issue or if they need further assistance.",
+                    "value": "Here are the key aspects of the health insurance plans based on your inquiry: [summary of coverage, pricing, and eligibility].",
+                    "task": "Deliver the information to the user, summarizing key aspects of the health insurance plans that pertain to their inquiry.",
                     "directed": false
                 },
                 "limit": 1
@@ -309,8 +309,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "If you need more help, you can reach out to our customer support team at [support contact] or visit our help center for additional resources.",
-                    "task": "If the user needs more help, direct them to the appropriate support channels or provide additional resources.",
+                    "value": "Do you have any further questions or need clarification on any aspect of the health insurance plans?",
+                    "task": "Ask the user if they have any further questions or if they need clarification on any aspect of the health insurance plans.",
                     "directed": false
                 },
                 "limit": 1
@@ -324,8 +324,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Could you please tell me the specific type of robot you're interested in or have ordered?",
-                    "task": "Ask the user for the specific type of robot they have ordered or are interested in to gather context.",
+                    "value": "If you have any more questions, feel free to ask! Otherwise, I can assist you with the next steps for enrollment.",
+                    "task": "If the user has more questions, repeat the process of providing detailed answers until all inquiries are addressed. If not, offer to assist with any next steps regarding enrollment or further services.",
                     "directed": false
                 },
                 "limit": 1
@@ -335,12 +335,12 @@
             "22",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to retrieve information related to the delivery times associated with the specified robot type.",
+                    "value": "Please provide your zip code or city name, and I will help you find the nearest MinuteClinic location.",
+                    "task": "Assist in finding a MinuteClinic location.",
                     "directed": false
                 },
                 "limit": 1
@@ -350,12 +350,12 @@
             "23",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "The estimated delivery time for the robot you selected is 5-7 business days with standard shipping.",
-                    "task": "Provide the estimated delivery times based on the user's specified robot type and any relevant conditions (e.g., standard shipping or expedited options).",
+                    "value": "What type of appointment would you like to schedule? A general consultation or a follow-up visit?",
+                    "task": "Inquire about the type of appointment the user wants to schedule (e.g., general consultation, follow-up visit).",
                     "directed": false
                 },
                 "limit": 1
@@ -369,8 +369,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you need any additional information about shipping options, tracking, or our policies?",
-                    "task": "Inquire if the user needs any additional information about shipping options, tracking, or related policies.",
+                    "value": "Please let me know your preferred date and time for the appointment.",
+                    "task": "Ask the user for their preferred date and time for the appointment.",
                     "directed": false
                 },
                 "limit": 1
@@ -380,12 +380,12 @@
             "25",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
                 },
                 "attribute": {
-                    "value": "Do you have all the information you need, or is there anything else I can assist you with regarding your order?",
-                    "task": "Confirm if the user has all the information they need or if they require further assistance regarding their order.",
+                    "value": "I am checking the availability for your requested date and time.",
+                    "task": "Check the availability of appointments based on the user's input and provide available options.",
                     "directed": false
                 },
                 "limit": 1
@@ -399,8 +399,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Can you please describe the issue you are facing with the product or service?",
-                    "task": "Ask the user to describe the issue they are facing with the product or service.",
+                    "value": "I have found an appointment for you. Would you like to confirm this time, or do you have any additional preferences?",
+                    "task": "Confirm the user's choice of appointment time and date, and ask if they would like to provide any additional information or preferences.",
                     "directed": false
                 },
                 "limit": 1
@@ -410,12 +410,12 @@
             "27",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to search for troubleshooting steps related to the user's described issue.",
+                    "value": "Your appointment has been confirmed for [date and time]. Please arrive 10 minutes early and bring any necessary documents.",
+                    "task": "Provide the user with confirmation of the appointment details and any necessary instructions for the visit.",
                     "directed": false
                 },
                 "limit": 1
@@ -429,8 +429,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Here are some steps you can try to resolve this issue: [list of steps].",
-                    "task": "Present the user with the retrieved troubleshooting steps or suggestions to resolve the issue.",
+                    "value": "Hello! How can I assist you with your billing issue today?",
+                    "task": "Greet the user and inquire about the specific billing issue they are facing or the specific question they have regarding their billing.",
                     "directed": false
                 },
                 "limit": 1
@@ -440,12 +440,12 @@
             "29",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
                 },
                 "attribute": {
-                    "value": "Were you able to resolve the issue using the provided steps, or do you need further assistance?",
-                    "task": "Ask the user if they were able to resolve the issue using the provided steps or need further assistance.",
+                    "value": "",
+                    "task": "Utilize FaissRAGWorker to retrieve relevant information from internal documentation regarding billing policies, FAQs, and procedures related to the user's inquiry.",
                     "directed": false
                 },
                 "limit": 1
@@ -459,8 +459,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "It seems like the issue is still present. I will escalate this to our technical support team. You can also reach out to them at [contact information].",
-                    "task": "If the issue persists, escalate the user's issue to technical support or provide them with the relevant contact information.",
+                    "value": "Based on our billing policy, your issue appears to be related to a late fee. Let me explain how that works.",
+                    "task": "Provide the user with a clear and concise response based on the information retrieved, ensuring the details are relevant to their specific situation.",
                     "directed": false
                 },
                 "limit": 1
@@ -474,8 +474,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "What would you like to know about promotions or discounts for Richtech Robotics products?",
-                    "task": "Ask the user specifically what they would like to know about promotions or discounts related to Richtech Robotics products.",
+                    "value": "Do you need further clarification on this issue, or is there anything else you would like to ask?",
+                    "task": "Ask the user if they need further clarification on the billing issue or if they have any additional questions related to billing.",
                     "directed": false
                 },
                 "limit": 1
@@ -485,12 +485,12 @@
             "32",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to retrieve information about current promotions or discounts, based on the user's inquiry.",
+                    "value": "Has your billing inquiry been resolved, or do you need any more help? If so, I can assist you further.",
+                    "task": "Confirm with the user if their billing inquiry has been resolved or if they require further assistance, and guide them on how to proceed if necessary.",
                     "directed": false
                 },
                 "limit": 1
@@ -500,12 +500,12 @@
             "33",
             {
                 "resource": {
-                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
-                    "name": "MessageWorker"
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
                 },
                 "attribute": {
-                    "value": "Currently, we have a 20% discount on the Richtech Robotics Pro model and a buy one get one free offer on select items. Would you like more details?",
-                    "task": "Present the user with the details of ongoing promotions or discounts available for Richtech Robotics products.",
+                    "value": "Our pharmacy policies include details about prescription refills, medication safety, and patient confidentiality. Would you like more specific information about any of these areas?",
+                    "task": "Provide information on pharmacy policies.",
                     "directed": false
                 },
                 "limit": 1
@@ -519,8 +519,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you need more information or assistance with any specific promotion or discount?",
-                    "task": "Inquire if the user would like more information or assistance regarding a specific promotion or discount.",
+                    "value": "What specific interests or needs do you have in health and wellness programs? Are you looking for fitness, nutrition, or mental health options?",
+                    "task": "Inquire about the user's specific interests or needs in health and wellness programs (e.g., fitness, nutrition, mental health).",
                     "directed": false
                 },
                 "limit": 1
@@ -530,12 +530,132 @@
             "35",
             {
                 "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Based on your interest in fitness, here are some programs available: Fit for Life, Zen Nutrition, and Mindfulness for Daily Living.",
+                    "task": "Retrieve and present detailed information about health and wellness programs that match the user's interests.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "36",
+            {
+                "resource": {
                     "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you have any other questions or need further assistance regarding promotions or any other inquiries?",
-                    "task": "Confirm if the user has any additional questions or requires further assistance related to promotions or other customer service inquiries.",
+                    "value": "Do you need more details about any specific program, or do you have any additional questions?",
+                    "task": "Ask if the user needs more details about a specific program or if they have additional questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "37",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Are you satisfied with the information provided, or do you need any further assistance?",
+                    "task": "Confirm if the user is satisfied with the information provided or if they require further assistance.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "38",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like to enroll in any of these programs, or would you like to access additional resources?",
+                    "task": "Provide options for next steps, such as enrolling in a program or accessing additional resources.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "39",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "What specific questions or concerns do you have about our vaccination services?",
+                    "task": "Inquire about the user's specific questions or concerns regarding vaccination services to understand their needs.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "40",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Utilize the FaissRAGWorker to retrieve relevant information regarding vaccination services from internal documentation, including policies, FAQs, and offered services.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "41",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are the details about our vaccination services: We offer a variety of vaccines, including flu and COVID-19 shots. Our services are available at various locations and times.",
+                    "task": "Present the retrieved information to the user in a clear and concise manner, ensuring all relevant details are covered.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "42",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any follow-up questions or need any clarification about the vaccination services?",
+                    "task": "Ask if the user has any follow-up questions or needs clarification on the provided information.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "43",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "If you're looking for specific vaccine details or have more concerns, I can provide additional information. What would you like to know?",
+                    "task": "Address the user's follow-up questions or provide additional information as needed, ensuring the user's concerns are fully resolved.",
                     "directed": false
                 },
                 "limit": 1
@@ -547,7 +667,7 @@
             "0",
             "1",
             {
-                "intent": "User wants information about a specific robot model",
+                "intent": "User wants to inquire about prescription medications",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -612,7 +732,7 @@
             "0",
             "6",
             {
-                "intent": "User inquires about purchasing options",
+                "intent": "User needs assistance with refilling prescriptions",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -677,7 +797,7 @@
             "0",
             "11",
             {
-                "intent": "User wants to inquire about robot rentals",
+                "intent": "User asks about over-the-counter products",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -739,26 +859,26 @@
             }
         ],
         [
-            "0",
+            "15",
             "16",
             {
-                "intent": "User has a question or issue related to customer service",
+                "intent": "None",
                 "attribute": {
                     "weight": 1,
-                    "pred": true,
+                    "pred": false,
                     "definition": "",
                     "sample_utterances": []
                 }
             }
         ],
         [
-            "16",
+            "0",
             "17",
             {
-                "intent": "None",
+                "intent": "User has a question about health insurance plans",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -804,10 +924,23 @@
             }
         ],
         [
-            "0",
+            "20",
             "21",
             {
-                "intent": "User wants to know the delivery times for a specific robot",
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "22",
+            {
+                "intent": "User wants to locate a MinuteClinic",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -817,26 +950,13 @@
             }
         ],
         [
-            "21",
-            "22",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "22",
+            "0",
             "23",
             {
-                "intent": "None",
+                "intent": "User inquires about appointment scheduling",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -869,39 +989,39 @@
             }
         ],
         [
-            "0",
+            "25",
             "26",
             {
-                "intent": "User needs technical support for a robot they purchased",
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "26",
+            "27",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "28",
+            {
+                "intent": "User needs help with billing inquiries",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "26",
-            "27",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "27",
-            "28",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -934,10 +1054,36 @@
             }
         ],
         [
-            "0",
+            "30",
             "31",
             {
-                "intent": "User wants information on the latest promotions or deals",
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "31",
+            "32",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "33",
+            {
+                "intent": "User wants to understand pharmacy policies",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -947,39 +1093,13 @@
             }
         ],
         [
-            "31",
-            "32",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "32",
-            "33",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "33",
+            "0",
             "34",
             {
-                "intent": "None",
+                "intent": "User seeks assistance with health and wellness programs",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -997,22 +1117,126 @@
                     "sample_utterances": []
                 }
             }
+        ],
+        [
+            "35",
+            "36",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "36",
+            "37",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "37",
+            "38",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "39",
+            {
+                "intent": "User wants to know about vaccination services",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "39",
+            "40",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "40",
+            "41",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "41",
+            "42",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "42",
+            "43",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
         ]
     ],
-    "role": "customer service assistant",
+    "role": "healthcare customer service assistant",
     "user_objective": "The customer service assistant helps users with customer service inquiries. It can provide information about products, services, and policies, as well as help users resolve issues and complete transactions.",
     "builder_objective": "The customer service assistant helps to request customer's contact information.",
-    "domain": "robotics and automation",
-    "intro": "Richtech Robotics's headquarter is in Las Vegas; the other office is in Austin. Richtech Robotics provide worker robots (ADAM, ARM, ACE), delivery robots (Matradee, Matradee X, Matradee L, Richie), cleaning robots (DUST-E SX, DUST-E MX) and multipurpose robots (skylark). Their products are intended for business purposes, but not for home purpose; the ADAM robot is available for purchase and rental for multiple purposes. This robot bartender makes tea, coffee and cocktails. Richtech Robotics also operate the world's first robot milk tea shop, ClouTea, in Las Vegas (www.cloutea.com), where all milk tea beverages are prepared by the ADAM robot. The delivery time will be one month for the delivery robot, 2 weeks for standard ADAM, and two months for commercial cleaning robot. ",
+    "domain": "healthcare",
+    "intro": "CVS Health is a leading healthcare solutions company headquartered in Woonsocket, Rhode Island. It operates across multiple business units including retail pharmacy, pharmacy benefit management (through CVS Caremark), and healthcare services (through MinuteClinic and Aetna). CVS Pharmacy stores are located throughout the United States, offering prescription fulfillment, over-the-counter medications, and wellness products. MinuteClinic provides walk-in medical care for common illnesses, vaccinations, and health screenings. Aetna, a CVS Health company, offers insurance plans including medical, dental, and vision coverage. CVS also operates an online portal and mobile app where customers can refill prescriptions, manage appointments, and access their health records. Typical delivery time for mail-order prescriptions is 1 or 2 business days for standard shipping, and same-day delivery is available in select areas through the CVS app or website.",
     "task_docs": [
         {
-            "source": "https://www.richtechrobotics.com/",
+            "source": "https://www.cvshealth.com/",
             "num": 20
         }
     ],
     "rag_docs": [
         {
-            "source": "https://www.richtechrobotics.com/",
+            "source": "https://www.cvshealth.com/",
             "num": 20
         }
     ],

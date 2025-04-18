@@ -1,0 +1,72 @@
+[
+    {
+        "goal": "product rental",
+        "product_experience_level": "used competitor product",
+        "customer_type": "returning customer",
+        "persona": "neutral",
+        "current_webpage": "about page",
+        "modality": "text",
+        "communication_type": "outgoing",
+        "discovery_type": "social media",
+        "buying_behavior": "economic",
+        "budget": "low budget",
+        "purchase_history": "season subscription holder",
+        "location": "New York"
+    },
+    {
+        "goal": "request repair",
+        "product_experience_level": "new to this product",
+        "customer_type": "returning customer",
+        "persona": "neutral",
+        "current_webpage": "home page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "third party website",
+        "buying_behavior": "quality oriented",
+        "budget": "low budget",
+        "purchase_history": "season subscription holder",
+        "location": "Dublin"
+    },
+    {
+        "goal": "report product issue",
+        "product_experience_level": "new to this product",
+        "customer_type": "returning customer",
+        "persona": "passive",
+        "current_webpage": "about page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "social media",
+        "buying_behavior": "quality oriented",
+        "budget": "high budget",
+        "purchase_history": "season subscription holder",
+        "location": "New York"
+    },
+    {
+        "goal": "asking for refund",
+        "product_experience_level": "used competitor product",
+        "customer_type": "new prospect",
+        "persona": "passive",
+        "current_webpage": "home page",
+        "modality": "text",
+        "communication_type": "outgoing",
+        "discovery_type": "friend recommendation",
+        "buying_behavior": "economic",
+        "budget": "low budget",
+        "purchase_history": "member discount user",
+        "location": "Dublin"
+    },
+    {
+        "goal": "product rental",
+        "product_experience_level": "new to this product",
+        "customer_type": "returning customer",
+        "persona": "aggressive",
+        "current_webpage": "home page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "third party website",
+        "buying_behavior": "economic",
+        "budget": "moderate budget",
+        "purchase_history": "single ticket purchase",
+        "location": "Dublin"
+    }
+]

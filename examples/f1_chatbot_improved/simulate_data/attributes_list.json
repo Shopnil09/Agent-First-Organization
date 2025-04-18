@@ -1,0 +1,72 @@
+[
+    {
+        "goal": "product purchase",
+        "product_experience_level": "new to this product",
+        "customer_type": "new prospect",
+        "persona": "aggressive",
+        "current_webpage": "product page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "friend recommendation",
+        "buying_behavior": "quality oriented",
+        "budget": "high budget",
+        "purchase_history": "F1 merchandise bought",
+        "location": "United States"
+    },
+    {
+        "goal": "interested in product information",
+        "product_experience_level": "new to this product",
+        "customer_type": "returning customer",
+        "persona": "passive",
+        "current_webpage": "product page",
+        "modality": "text",
+        "communication_type": "outgoing",
+        "discovery_type": "friend recommendation",
+        "buying_behavior": "economic",
+        "budget": "mid-range budget",
+        "purchase_history": "F1 merchandise bought",
+        "location": "United States"
+    },
+    {
+        "goal": "report product issue",
+        "product_experience_level": "new to this product",
+        "customer_type": "returning customer",
+        "persona": "passive",
+        "current_webpage": "product page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "search engine results",
+        "buying_behavior": "quality oriented",
+        "budget": "mid-range budget",
+        "purchase_history": "F1 streaming subscription",
+        "location": "United Kingdom"
+    },
+    {
+        "goal": "interested in product information",
+        "product_experience_level": "new to this product",
+        "customer_type": "returning customer",
+        "persona": "neutral",
+        "current_webpage": "home page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "social media",
+        "buying_behavior": "economic",
+        "budget": "low budget",
+        "purchase_history": "F1 merchandise bought",
+        "location": "United Kingdom"
+    },
+    {
+        "goal": "product rental",
+        "product_experience_level": "used competitor product",
+        "customer_type": "returning customer",
+        "persona": "neutral",
+        "current_webpage": "product page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "social media",
+        "buying_behavior": "quality oriented",
+        "budget": "high budget",
+        "purchase_history": "F1 merchandise bought",
+        "location": "United States"
+    }
+]

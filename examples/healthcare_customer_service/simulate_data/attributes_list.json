@@ -1,0 +1,72 @@
+[
+    {
+        "goal": "asking for refund",
+        "product_experience_level": "used competitor product",
+        "customer_type": "new prospect",
+        "persona": "passive",
+        "current_webpage": "product page",
+        "modality": "text",
+        "communication_type": "outgoing",
+        "discovery_type": "third party website",
+        "buying_behavior": "quality oriented",
+        "budget": "moderate budget",
+        "purchase_history": "frequent prescription refills",
+        "location": "Southern US"
+    },
+    {
+        "goal": "asking replacement",
+        "product_experience_level": "new to this product",
+        "customer_type": "new prospect",
+        "persona": "neutral",
+        "current_webpage": "home page",
+        "modality": "text",
+        "communication_type": "outgoing",
+        "discovery_type": "third party website",
+        "buying_behavior": "economic",
+        "budget": "moderate budget",
+        "purchase_history": "frequent prescription refills",
+        "location": "Northeast US"
+    },
+    {
+        "goal": "interested in product information",
+        "product_experience_level": "used competitor product",
+        "customer_type": "returning customer",
+        "persona": "aggressive",
+        "current_webpage": "about page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "third party website",
+        "buying_behavior": "quality oriented",
+        "budget": "moderate budget",
+        "purchase_history": "wellness product purchases",
+        "location": "Northeast US"
+    },
+    {
+        "goal": "product rental",
+        "product_experience_level": "used competitor product",
+        "customer_type": "returning customer",
+        "persona": "neutral",
+        "current_webpage": "home page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "friend recommendation",
+        "buying_behavior": "quality oriented",
+        "budget": "low budget",
+        "purchase_history": "frequent prescription refills",
+        "location": "Southern US"
+    },
+    {
+        "goal": "report product issue",
+        "product_experience_level": "new to this product",
+        "customer_type": "new prospect",
+        "persona": "passive",
+        "current_webpage": "about page",
+        "modality": "text",
+        "communication_type": "incoming",
+        "discovery_type": "search engine results",
+        "buying_behavior": "economic",
+        "budget": "low budget",
+        "purchase_history": "over-the-counter medication purchases",
+        "location": "West Coast US"
+    }
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "task_name": "Assist user in booking tickets for their chosen event",
+        "steps": [
+            "Ask the user which event they are interested in attending.",
+            "Inquire about the date and time preferences for the event.",
+            "Confirm the number of tickets the user would like to book.",
+            "Provide information regarding ticket availability for the selected event and time.",
+            "Assist the user through the booking process, confirming details and collecting payment information if they decide to proceed."
+        ]
+    },
+    {
+        "task_name": "Provide details about upcoming events and performances",
+        "steps": [
+            "Greet the user and ask if they are interested in specific types of events or performances.",
+            "Based on the user's response, provide a list of upcoming events that match their interests or inquire for more details about the user's preferences.",
+            "Share key details about the selected events, such as date, time, venue, and ticket availability.",
+            "Ask if the user would like more information about a specific event or assistance in booking tickets.",
+            "Confirm the user's selection and guide them through the booking process if they choose to proceed."
+        ]
+    },
+    {
+        "task_name": "Check and provide information on ticket availability for selected events",
+        "steps": [
+            "Ask the user which event they are interested in to check ticket availability.",
+            "Once the user provides the event name, confirm the event details and check the date or time preferences for the event.",
+            "Provide information on the availability of tickets for the selected event, including options for different seating arrangements, if applicable.",
+            "Ask if the user would like to proceed with booking tickets for the available options or if they need additional information.",
+            "If the user wants to proceed, guide them through the booking process or confirm their selections before finalizing the ticket purchase."
+        ]
+    },
+    {
+        "task_name": "Recommend events based on user's interests and past preferences",
+        "steps": [
+            "Ask the user about their interests or preferences for events (e.g., music genre, type of show, favorite performers).",
+            "Inquire about any previous events they have attended or enjoyed to gather more context on their preferences.",
+            "Based on user responses, suggest a list of upcoming events that align with their interests and past preferences.",
+            "Ask the user if they are interested in any of the suggested events or if they would like more options.",
+            "Confirm which event the user is interested in and guide them through the booking process."
+        ]
+    },
+    {
+        "task_name": "Guide the user through the ticket booking process step-by-step",
+        "steps": [
+            "Greet the user and ask which event or show they are interested in booking tickets for.",
+            "Once the user specifies the event, ask for their preferred date and time for attending the show.",
+            "Inquire about the number of tickets the user would like to book.",
+            "Provide information about the availability of tickets for the selected event and ask if the user would like to proceed with the booking.",
+            "Guide the user through the booking process, including payment options and final confirmation of their order."
+        ]
+    },
+    {
+        "task_name": "Provide information about the venue, including location, accessibility, and seating",
+        "steps": [
+            "Provide information about the venue, including location, accessibility, and seating"
+        ]
+    },
+    {
+        "task_name": "Inform user about ticket prices for different events and any available discounts",
+        "steps": [
+            "Ask the user which event they are interested in to provide specific information about ticket prices.",
+            "Provide the user with the ticket prices for the event they specified, including details about seating options.",
+            "Inquire if the user would like to know about any available discounts for that event.",
+            "If the user expresses interest in discounts, provide details about any applicable discounts or promotions.",
+            "Ask the user if they would like assistance in booking tickets after providing the prices and discount information."
+        ]
+    },
+    {
+        "task_name": "Provide information and assistance regarding membership benefits and how to sign up",
+        "steps": [
+            "Provide information and assistance regarding membership benefits and how to sign up"
+        ]
+    },
+    {
+        "task_name": "Inform user about special events, programs, and any gala experiences available",
+        "steps": [
+            "Inform user about special events, programs, and any gala experiences available"
+        ]
+    },
+    {
+        "task_name": "Assist user with inquiries related to their account, including login and password help",
+        "steps": [
+            "Ask the user for their account information, such as email address or username, to assist with their inquiry.",
+            "Inquire if the user needs help with logging in, resetting their password, or accessing their account details.",
+            "Provide instructions for resetting the password if the user requests password help, including any necessary security checks.",
+            "Confirm if the user is able to log in successfully after following the provided instructions.",
+            "Offer further assistance or provide additional resources related to account management if needed."
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+{
+  "role": "healthcare customer service assistant",
+  "user_objective": "The customer service assistant helps users with customer service inquiries. It can provide information about products, services, and policies, as well as help users resolve issues and complete transactions.",
+  "builder_objective": "The customer service assistant helps to request customer's contact information.",
+  "domain": "healthcare",
+  "intro": "CVS Health is a leading healthcare solutions company headquartered in Woonsocket, Rhode Island. It operates across multiple business units including retail pharmacy, pharmacy benefit management (through CVS Caremark), and healthcare services (through MinuteClinic and Aetna). CVS Pharmacy stores are located throughout the United States, offering prescription fulfillment, over-the-counter medications, and wellness products. MinuteClinic provides walk-in medical care for common illnesses, vaccinations, and health screenings. Aetna, a CVS Health company, offers insurance plans including medical, dental, and vision coverage. CVS also operates an online portal and mobile app where customers can refill prescriptions, manage appointments, and access their health records. Typical delivery time for mail-order prescriptions is 1 or 2 business days for standard shipping, and same-day delivery is available in select areas through the CVS app or website.",
+  "task_docs": [{
+      "source": "https://www.cvshealth.com/",
+      "num": 20
+  }],
+  "rag_docs": [{
+      "source": "https://www.cvshealth.com/",
+      "num": 20
+  }],
+  "tasks": [],
+  "workers": [
+        {"id": "9aa47724-0b77-4752-9528-cf4b06a46915", "name": "FaissRAGWorker", "path": "faiss_rag_worker.py"},
+        {"id": "26bb6634-3bee-417d-ad75-23269ac17bc3", "name": "MessageWorker", "path": "message_worker.py"},
+        {"id": "9c15af81-04b3-443e-be04-a3522124b905", "name": "SearchWorker", "path": "search_worker.py"}
+    ],
+  "tools": []
+}

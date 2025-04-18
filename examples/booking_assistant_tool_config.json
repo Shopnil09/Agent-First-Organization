@@ -11,7 +11,11 @@
         }
     ],
     "tasks": [],
-    "workers": [],
+    "workers": [
+        {"id": "26bb6634-3bee-417d-ad75-23269ac17bc3", "name": "MessageWorker", "path": "message_worker.py"},
+        {"id": "9c15af81-04b3-443e-be04-a3522124b905", "name": "DataBaseWorker", "path": "database_worker.py"},
+        {"id": "b06c2b58-12c5-41fe-9838-e93b530e42e8", "name": "DefaultWorker", "path": "default_worker.py"}
+    ],
     "tools": [
         {"id": "ddbe6adc-cd0e-40bc-8a95-91cb69ed807b", "name": "search_show", "path": "booking_db/search_show.py"},
         {"id": "b9dbef8b-8219-4e0a-a50d-3b01614e5443", "name": "book_show", "path": "booking_db/book_show.py"},

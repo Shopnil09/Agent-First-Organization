@@ -8,7 +8,7 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Hello! I'm your Customer Service Assistant. How may I assist you with your inquiries today?",
+                    "value": "Hello! I'm your Booking Assistant. What show are you interested in, and how can I help you secure your tickets today?",
                     "task": "start message",
                     "directed": false
                 },
@@ -24,8 +24,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Which robot model are you interested in?",
-                    "task": "Ask the user to specify which robot model they are interested in.",
+                    "value": "Which event are you interested in attending?",
+                    "task": "Ask the user which event they are interested in attending.",
                     "directed": false
                 },
                 "limit": 1
@@ -35,12 +35,12 @@
             "2",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Retrieve detailed specifications and features of the specified robot model using the FaissRAGWorker.",
+                    "value": "What date and time do you prefer for the event?",
+                    "task": "Inquire about the date and time preferences for the event.",
                     "directed": false
                 },
                 "limit": 1
@@ -54,8 +54,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "The specifications of the robot model you requested are as follows: [insert specifications].",
-                    "task": "Provide the user with the specifications and features of the robot model.",
+                    "value": "How many tickets would you like to book?",
+                    "task": "Confirm the number of tickets the user would like to book.",
                     "directed": false
                 },
                 "limit": 1
@@ -69,8 +69,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you have any further questions about this robot model or need any additional information?",
-                    "task": "Ask the user if they have any further questions about the robot model or if they need additional information.",
+                    "value": "I will check the availability of tickets for the selected event and time.",
+                    "task": "Provide information regarding ticket availability for the selected event and time.",
                     "directed": false
                 },
                 "limit": 1
@@ -84,8 +84,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "If you have more questions, feel free to ask. If you're satisfied, thank you for your time!",
-                    "task": "If the user has more questions, assist them further, or conclude the interaction if they are satisfied.",
+                    "value": "Let's proceed with your booking. Please confirm your details and provide payment information.",
+                    "task": "Assist the user through the booking process, confirming details and collecting payment information if they decide to proceed.",
                     "directed": false
                 },
                 "limit": 1
@@ -99,8 +99,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Could you please tell me which product or service you are interested in?",
-                    "task": "Inquire about the specific product or service the user is interested in to gather relevant context.",
+                    "value": "Hello! Are you interested in any specific types of events or performances?",
+                    "task": "Greet the user and ask if they are interested in specific types of events or performances.",
                     "directed": false
                 },
                 "limit": 1
@@ -110,12 +110,12 @@
             "7",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "I found the product you mentioned. It is available for $199.99.",
-                    "task": "Utilize FaissRAGWorker to provide the user with price and availability information based on the internal documentation for the requested product or service.",
+                    "value": "Great! Here are some events that match your interests: Concerts, Theatre, Sports. Would you like more information on any of these?",
+                    "task": "Based on the user's response, provide a list of upcoming events that match their interests or inquire for more details about the user's preferences.",
                     "directed": false
                 },
                 "limit": 1
@@ -129,8 +129,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Would you like more detailed information on the specifications or features of this product?",
-                    "task": "Ask the user if they need more detailed information such as specifications, features, or related products.",
+                    "value": "The concert is on March 15th at 7 PM at the City Hall. Tickets are available now.",
+                    "task": "Share key details about the selected events, such as date, time, venue, and ticket availability.",
                     "directed": false
                 },
                 "limit": 1
@@ -140,12 +140,12 @@
             "9",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Here are alternate options that may suit your needs: Product A for $179.99 and Product B for $209.99.",
-                    "task": "If requested, provide additional details or alternate options that may suit the user's needs.",
+                    "value": "Would you like more information about the concert or assistance in booking your tickets?",
+                    "task": "Ask if the user would like more information about a specific event or assistance in booking tickets.",
                     "directed": false
                 },
                 "limit": 1
@@ -159,8 +159,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Are you ready to proceed with your purchase, or do you need further assistance?",
-                    "task": "Confirm if the user is ready to make a purchase or if they require further assistance with their inquiry.",
+                    "value": "You've chosen the concert on March 15th. Let's get you through the booking process now!",
+                    "task": "Confirm the user's selection and guide them through the booking process if they choose to proceed.",
                     "directed": false
                 },
                 "limit": 1
@@ -170,12 +170,12 @@
             "11",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "The rental process for robots includes understanding your needs, selecting a robot type, and completing the necessary paperwork. Key steps involve reviewing rental terms and setting up delivery arrangements.",
-                    "task": "Provide an overview of the rental process for robots, including key steps and important information the user should know.",
+                    "value": "Which event are you interested in attending?",
+                    "task": "Ask the user which event they are interested in to check ticket availability.",
                     "directed": false
                 },
                 "limit": 1
@@ -189,8 +189,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you have any specific questions about the rental process or need any clarification on certain aspects?",
-                    "task": "Inquire if the user has any specific questions regarding the rental process or if they need clarification on any particular aspect.",
+                    "value": "Great! Can you please confirm the date or time you prefer for this event?",
+                    "task": "Once the user provides the event name, confirm the event details and check the date or time preferences for the event.",
                     "directed": false
                 },
                 "limit": 1
@@ -200,12 +200,12 @@
             "13",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "We offer various types of robots, including service robots for home assistance, industrial robots for manufacturing, and more, each with unique specifications and features tailored to different needs.",
-                    "task": "Share detailed information about the different rental options available for robots, including types, specifications, and any unique features.",
+                    "value": "Currently, we have tickets available for the event you selected. We have options for standard and premium seating. Would you like to know more about these options?",
+                    "task": "Provide information on the availability of tickets for the selected event, including options for different seating arrangements, if applicable.",
                     "directed": false
                 },
                 "limit": 1
@@ -219,8 +219,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Are you interested in a specific type of robot, or would you like help comparing the available options?",
-                    "task": "Ask the user if they are interested in a specific type of robot or if they need assistance in comparing available options.",
+                    "value": "Would you like to proceed with booking the tickets, or do you need additional information?",
+                    "task": "Ask if the user would like to proceed with booking tickets for the available options or if they need additional information.",
                     "directed": false
                 },
                 "limit": 1
@@ -234,8 +234,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Great choice! If you need any additional assistance with the rental process, feel free to ask.",
-                    "task": "Confirm the user's choice and provide any additional assistance needed for completing the rental process.",
+                    "value": "Let's get started with the booking process! Please confirm your ticket selection and I'll guide you through the steps.",
+                    "task": "If the user wants to proceed, guide them through the booking process or confirm their selections before finalizing the ticket purchase.",
                     "directed": false
                 },
                 "limit": 1
@@ -249,8 +249,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Could you please provide more details about your inquiry or the issue you are facing?",
-                    "task": "Ask the user to specify their inquiry or issue in detail.",
+                    "value": "What type of events are you interested in? Do you have a favorite music genre or performer?",
+                    "task": "Ask the user about their interests or preferences for events (e.g., music genre, type of show, favorite performers).",
                     "directed": false
                 },
                 "limit": 1
@@ -260,12 +260,12 @@
             "17",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Retrieve relevant information based on the user's inquiry from the company's internal documentation using FaissRAGWorker.",
+                    "value": "Can you share any past events you have attended that you enjoyed?",
+                    "task": "Inquire about any previous events they have attended or enjoyed to gather more context on their preferences.",
                     "directed": false
                 },
                 "limit": 1
@@ -279,8 +279,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Here is the information related to your inquiry: [insert relevant information].",
-                    "task": "Present the information or solution to the user, ensuring clarity and relevance to their inquiry.",
+                    "value": "Based on your preferences, here are some upcoming events you might enjoy: [Event 1, Event 2, Event 3].",
+                    "task": "Based on user responses, suggest a list of upcoming events that align with their interests and past preferences.",
                     "directed": false
                 },
                 "limit": 1
@@ -294,8 +294,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Does this information resolve your issue, or do you need any further assistance?",
-                    "task": "Ask the user if the provided information resolves their issue or if they need further assistance.",
+                    "value": "Are you interested in any of the events I suggested, or would you like to see more options?",
+                    "task": "Ask the user if they are interested in any of the suggested events or if they would like more options.",
                     "directed": false
                 },
                 "limit": 1
@@ -309,8 +309,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "If you need more help, you can reach out to our customer support team at [support contact] or visit our help center for additional resources.",
-                    "task": "If the user needs more help, direct them to the appropriate support channels or provide additional resources.",
+                    "value": "Great choice! Let\u2019s proceed with the booking for [Event Name].",
+                    "task": "Confirm which event the user is interested in and guide them through the booking process.",
                     "directed": false
                 },
                 "limit": 1
@@ -324,8 +324,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Could you please tell me the specific type of robot you're interested in or have ordered?",
-                    "task": "Ask the user for the specific type of robot they have ordered or are interested in to gather context.",
+                    "value": "Hello! Which event or show are you interested in booking tickets for?",
+                    "task": "Greet the user and ask which event or show they are interested in booking tickets for.",
                     "directed": false
                 },
                 "limit": 1
@@ -335,12 +335,12 @@
             "22",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to retrieve information related to the delivery times associated with the specified robot type.",
+                    "value": "Great choice! What date and time do you prefer for attending the show?",
+                    "task": "Once the user specifies the event, ask for their preferred date and time for attending the show.",
                     "directed": false
                 },
                 "limit": 1
@@ -350,12 +350,12 @@
             "23",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "The estimated delivery time for the robot you selected is 5-7 business days with standard shipping.",
-                    "task": "Provide the estimated delivery times based on the user's specified robot type and any relevant conditions (e.g., standard shipping or expedited options).",
+                    "value": "How many tickets would you like to book for this event?",
+                    "task": "Inquire about the number of tickets the user would like to book.",
                     "directed": false
                 },
                 "limit": 1
@@ -369,8 +369,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you need any additional information about shipping options, tracking, or our policies?",
-                    "task": "Inquire if the user needs any additional information about shipping options, tracking, or related policies.",
+                    "value": "I have checked the availability, and there are tickets available. Would you like to proceed with the booking?",
+                    "task": "Provide information about the availability of tickets for the selected event and ask if the user would like to proceed with the booking.",
                     "directed": false
                 },
                 "limit": 1
@@ -384,8 +384,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you have all the information you need, or is there anything else I can assist you with regarding your order?",
-                    "task": "Confirm if the user has all the information they need or if they require further assistance regarding their order.",
+                    "value": "Let's complete your booking. I will guide you through the payment options. Please provide your payment information for confirmation.",
+                    "task": "Guide the user through the booking process, including payment options and final confirmation of their order.",
                     "directed": false
                 },
                 "limit": 1
@@ -399,8 +399,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Can you please describe the issue you are facing with the product or service?",
-                    "task": "Ask the user to describe the issue they are facing with the product or service.",
+                    "value": "The venue is located at 123 Main St, accessible via public transport, and offers both standard and premium seating options.",
+                    "task": "Provide information about the venue, including location, accessibility, and seating.",
                     "directed": false
                 },
                 "limit": 1
@@ -410,12 +410,12 @@
             "27",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to search for troubleshooting steps related to the user's described issue.",
+                    "value": "Which event are you interested in? I can help you with ticket prices.",
+                    "task": "Ask the user which event they are interested in to provide specific information about ticket prices.",
                     "directed": false
                 },
                 "limit": 1
@@ -429,8 +429,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Here are some steps you can try to resolve this issue: [list of steps].",
-                    "task": "Present the user with the retrieved troubleshooting steps or suggestions to resolve the issue.",
+                    "value": "The ticket prices for the concert are $50 for standard seating and $80 for VIP seating.",
+                    "task": "Provide the user with the ticket prices for the event they specified, including details about seating options.",
                     "directed": false
                 },
                 "limit": 1
@@ -444,8 +444,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Were you able to resolve the issue using the provided steps, or do you need further assistance?",
-                    "task": "Ask the user if they were able to resolve the issue using the provided steps or need further assistance.",
+                    "value": "Would you like to know about any available discounts for this event?",
+                    "task": "Inquire if the user would like to know about any available discounts for that event.",
                     "directed": false
                 },
                 "limit": 1
@@ -459,8 +459,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "It seems like the issue is still present. I will escalate this to our technical support team. You can also reach out to them at [contact information].",
-                    "task": "If the issue persists, escalate the user's issue to technical support or provide them with the relevant contact information.",
+                    "value": "We currently have a 10% discount for early bird ticket purchases and a 15% discount for group bookings.",
+                    "task": "If the user expresses interest in discounts, provide details about any applicable discounts or promotions.",
                     "directed": false
                 },
                 "limit": 1
@@ -474,8 +474,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "What would you like to know about promotions or discounts for Richtech Robotics products?",
-                    "task": "Ask the user specifically what they would like to know about promotions or discounts related to Richtech Robotics products.",
+                    "value": "Would you like assistance in booking your tickets?",
+                    "task": "Ask the user if they would like assistance in booking tickets after providing the prices and discount information.",
                     "directed": false
                 },
                 "limit": 1
@@ -485,12 +485,12 @@
             "32",
             {
                 "resource": {
-                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-                    "name": "FaissRAGWorker"
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "",
-                    "task": "Utilize the FaissRAGWorker to retrieve information about current promotions or discounts, based on the user's inquiry.",
+                    "value": "Our membership offers various benefits including free shipping, exclusive discounts, and access to premium content. Would you like to know more about how to sign up?",
+                    "task": "Provide information and assistance regarding membership benefits and how to sign up.",
                     "directed": false
                 },
                 "limit": 1
@@ -504,8 +504,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Currently, we have a 20% discount on the Richtech Robotics Pro model and a buy one get one free offer on select items. Would you like more details?",
-                    "task": "Present the user with the details of ongoing promotions or discounts available for Richtech Robotics products.",
+                    "value": "We have some exciting upcoming events and gala experiences that you might be interested in. Would you like to know more about them?",
+                    "task": "Inform user about special events, programs, and any gala experiences available.",
                     "directed": false
                 },
                 "limit": 1
@@ -519,8 +519,8 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you need more information or assistance with any specific promotion or discount?",
-                    "task": "Inquire if the user would like more information or assistance regarding a specific promotion or discount.",
+                    "value": "Could you please provide your account information, like your email address or username, so I can assist you?",
+                    "task": "Ask the user for their account information, such as email address or username, to assist with their inquiry.",
                     "directed": false
                 },
                 "limit": 1
@@ -534,8 +534,53 @@
                     "name": "MessageWorker"
                 },
                 "attribute": {
-                    "value": "Do you have any other questions or need further assistance regarding promotions or any other inquiries?",
-                    "task": "Confirm if the user has any additional questions or requires further assistance related to promotions or other customer service inquiries.",
+                    "value": "Do you need help logging in, resetting your password, or accessing your account details?",
+                    "task": "Inquire if the user needs help with logging in, resetting their password, or accessing their account details.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "36",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "To reset your password, please click on 'Forgot Password' on the login page and follow the instructions sent to your email.",
+                    "task": "Provide instructions for resetting the password if the user requests password help, including any necessary security checks.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "37",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Were you able to log in successfully after following those instructions?",
+                    "task": "Confirm if the user is able to log in successfully after following the provided instructions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "38",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "If you need any more assistance or have questions about account management, feel free to ask!",
+                    "task": "Offer further assistance or provide additional resources related to account management if needed.",
                     "directed": false
                 },
                 "limit": 1
@@ -547,7 +592,7 @@
             "0",
             "1",
             {
-                "intent": "User wants information about a specific robot model",
+                "intent": "User wants to book tickets for a specific event",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -612,7 +657,7 @@
             "0",
             "6",
             {
-                "intent": "User inquires about purchasing options",
+                "intent": "User requires information about upcoming events",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -677,7 +722,7 @@
             "0",
             "11",
             {
-                "intent": "User wants to inquire about robot rentals",
+                "intent": "User wants to inquire about ticket availability",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -742,7 +787,7 @@
             "0",
             "16",
             {
-                "intent": "User has a question or issue related to customer service",
+                "intent": "User requests recommendations based on preferences",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -807,7 +852,7 @@
             "0",
             "21",
             {
-                "intent": "User wants to know the delivery times for a specific robot",
+                "intent": "User needs help with the booking process",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -872,7 +917,7 @@
             "0",
             "26",
             {
-                "intent": "User needs technical support for a robot they purchased",
+                "intent": "User has a question about venue details",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -882,13 +927,13 @@
             }
         ],
         [
-            "26",
+            "0",
             "27",
             {
-                "intent": "None",
+                "intent": "User wants to know about event pricing",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -934,10 +979,23 @@
             }
         ],
         [
-            "0",
+            "30",
             "31",
             {
-                "intent": "User wants information on the latest promotions or deals",
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "32",
+            {
+                "intent": "User requires assistance with membership inquiries",
                 "attribute": {
                     "weight": 1,
                     "pred": true,
@@ -947,39 +1005,26 @@
             }
         ],
         [
-            "31",
-            "32",
+            "0",
+            "33",
             {
-                "intent": "None",
+                "intent": "User wants to learn about special events and programs",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
             }
         ],
         [
-            "32",
-            "33",
-            {
-                "intent": "None",
-                "attribute": {
-                    "weight": 1,
-                    "pred": false,
-                    "definition": "",
-                    "sample_utterances": []
-                }
-            }
-        ],
-        [
-            "33",
+            "0",
             "34",
             {
-                "intent": "None",
+                "intent": "User needs assistance with personal account management",
                 "attribute": {
                     "weight": 1,
-                    "pred": false,
+                    "pred": true,
                     "definition": "",
                     "sample_utterances": []
                 }
@@ -997,32 +1042,60 @@
                     "sample_utterances": []
                 }
             }
+        ],
+        [
+            "35",
+            "36",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "36",
+            "37",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "37",
+            "38",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
         ]
     ],
-    "role": "customer service assistant",
-    "user_objective": "The customer service assistant helps users with customer service inquiries. It can provide information about products, services, and policies, as well as help users resolve issues and complete transactions.",
-    "builder_objective": "The customer service assistant helps to request customer's contact information.",
-    "domain": "robotics and automation",
-    "intro": "Richtech Robotics's headquarter is in Las Vegas; the other office is in Austin. Richtech Robotics provide worker robots (ADAM, ARM, ACE), delivery robots (Matradee, Matradee X, Matradee L, Richie), cleaning robots (DUST-E SX, DUST-E MX) and multipurpose robots (skylark). Their products are intended for business purposes, but not for home purpose; the ADAM robot is available for purchase and rental for multiple purposes. This robot bartender makes tea, coffee and cocktails. Richtech Robotics also operate the world's first robot milk tea shop, ClouTea, in Las Vegas (www.cloutea.com), where all milk tea beverages are prepared by the ADAM robot. The delivery time will be one month for the delivery robot, 2 weeks for standard ADAM, and two months for commercial cleaning robot. ",
+    "role": "booking assistant",
+    "user_objective": "The booking assistant helps users book tickets for the show. It can provide information about events, venues, and ticket availability, as well as help users complete the booking process. It can also provide recommendations based on user preferences.",
+    "builder_objective": "The booking assistant ask for user feedback at the end of the conversation.",
+    "domain": "Theatre",
+    "intro": "The mission of Irish Repertory Theatre is to provide a context for understanding the contemporary Irish-American experience through evocative works of theater, music, and dance. This mission is accomplished by staging the works of Irish and Irish-American classic and contemporary playwrights, encouraging the development of new works focused on the Irish and Irish-American experience, and producing the works of other cultures interpreted through the lens of an Irish sensibility.",
     "task_docs": [
         {
-            "source": "https://www.richtechrobotics.com/",
-            "num": 20
-        }
-    ],
-    "rag_docs": [
-        {
-            "source": "https://www.richtechrobotics.com/",
+            "source": "https://irishrep.org/",
             "num": 20
         }
     ],
     "tasks": [],
     "workers": [
-        {
-            "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
-            "name": "FaissRAGWorker",
-            "path": "faiss_rag_worker.py"
-        },
         {
             "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
             "name": "MessageWorker",
@@ -1030,8 +1103,13 @@
         },
         {
             "id": "9c15af81-04b3-443e-be04-a3522124b905",
-            "name": "SearchWorker",
-            "path": "search_worker.py"
+            "name": "DataBaseWorker",
+            "path": "database_worker.py"
+        },
+        {
+            "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+            "name": "DefaultWorker",
+            "path": "default_worker.py"
         }
     ],
     "tools": [],

@@ -1,0 +1,889 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome to your Formula 1 Assistant for the 2024 season! Whether you want to know about race schedules, driver stats, team information, or race results, I\u2019m here to help. What information are you looking for today?",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like to know about the races scheduled for the 2024 season?",
+                    "task": "Ask the user if they would like to know about races in the 2024 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "resource": {
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
+                },
+                "attribute": {
+                    "value": "The next three races in the 2024 season are: 1. Australia - March 17, 2. Bahrain - March 31, 3. Saudi Arabia - April 7.",
+                    "task": "If the user is interested in schedules, provide the dates and details of the next three races in the 2024 Formula 1 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "resource": {
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
+                },
+                "attribute": {
+                    "value": "The circuits for the 2024 season include Melbourne Grand Prix Circuit, Bahrain International Circuit, and Jeddah Corniche Circuit.",
+                    "task": "If the user is interested in locations, provide information about the circuits and races that took place in the 2024 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you want details on a specific race, like its timing, historical data, or coverage?",
+                    "task": "Ask the user if they want details on any specific race, such as the timing, historical data, or coverage.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Is there anything else you need? Any specific information about races, teams, or drivers?",
+                    "task": "Confirm if the user needs any further assistance or additional information about races, teams, or drivers.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Which driver's performance statistics are you interested in for the 2024 Formula 1 season?",
+                    "task": "Ask the user which specific driver's performance statistics they would like to know about in the 2024 Formula 1 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "resource": {
+                    "id": "f1-search-driver-001",
+                    "name": "f1_db-search_driver-search_driver"
+                },
+                "attribute": {
+                    "value": "You chose Lewis Hamilton. Let me fetch his latest performance statistics.",
+                    "task": "Once the user specifies a driver, confirm their choice and retrieve the latest performance statistics for that driver from the relevant sources.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "resource": {
+                    "id": "f1-rag-worker-001",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Here are the performance statistics for Lewis Hamilton: 1st place finishes: 5, points scored: 150, current standing: 2nd.",
+                    "task": "Provide the user with the detailed performance statistics, including key metrics such as race finishes, points scored, and overall standings for the specified driver.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need more information about Lewis Hamilton, like his team details or specific race performances?",
+                    "task": "Ask the user if they need additional information about the driver, such as background, team details, or specific race performances.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Are you satisfied with the statistics provided, or do you have any more questions about the 2024 Formula 1 season?",
+                    "task": "Confirm if the user is satisfied with the information provided or if they have any further questions regarding the 2024 Formula 1 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Which Formula 1 team would you like to know more about?",
+                    "task": "Ask the user which Formula 1 team they would like information about.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "resource": {
+                    "id": "f1-search-team-001",
+                    "name": "f1_db-search_team-search_team"
+                },
+                "attribute": {
+                    "value": "Currently, the Mercedes team is in 2nd place in the standings with Lewis Hamilton and George Russell as the drivers. Their performance has been impressive this season.",
+                    "task": "Retrieve and present key information about the selected team, including current standings, driver details, and team performance.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like to know more specific details about the team, such as individual driver stats or past race results?",
+                    "task": "Inquire if the user wants to know more specific details about the team, such as individual driver stats or past race results.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "14",
+            {
+                "resource": {
+                    "id": "f1-rag-worker-001",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Here are the individual stats for Lewis Hamilton this season: 5 wins, 3 second places, and 1 pole position.",
+                    "task": "Provide the additional information requested by the user, or clarify any relevant statistics or standings.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "15",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need information on any other teams or races in the 2024 season?",
+                    "task": "Ask the user if they need information on any other teams or races in the 2024 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "16",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Which race results are you interested in? Do you want results from a specific race or all completed races in the 2024 season?",
+                    "task": "Inquire the user about which race results they are interested in, specifying if they want results from a specific race or all completed races so far in the 2024 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "17",
+            {
+                "resource": {
+                    "id": "f1-search-race-001",
+                    "name": "f1_db-search_race-search_race"
+                },
+                "attribute": {
+                    "value": "The results for the 2024 Monaco Grand Prix are: 1st Place: Lewis Hamilton with a time of 1:30:45.",
+                    "task": "Based on the user's input, provide the results of the specified race(s), including the names of the winners and their race times.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "18",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like more information about lap times, driver stats, or team performances?",
+                    "task": "Ask the user if they need additional information about the race, such as lap times, driver stats, or team performances.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "19",
+            {
+                "resource": {
+                    "id": "f1-rag-worker-001",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Here are the lap times for the 2024 Monaco Grand Prix: Lap 1: 1:45, Lap 2: 1:42... What specific data would you like?",
+                    "task": "If the user requests more information, provide the details requested or ask for clarification on what specific data they need.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "20",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any more questions, or would you like information about upcoming races?",
+                    "task": "Confirm with the user if they have any more questions or if they need information about upcoming races.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "21",
+            {
+                "resource": {
+                    "id": "f1-search-driver-001",
+                    "name": "f1_db-search_driver-search_driver"
+                },
+                "attribute": {
+                    "value": "As of now, the current standings for drivers in the 2024 season are: 1. Lewis Hamilton, 2. Max Verstappen, 3. Charles Leclerc.",
+                    "task": "Provide current standings for drivers and teams in the 2024 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "22",
+            {
+                "resource": {
+                    "id": "f1-search-team-001",
+                    "name": "f1_db-search_team-search_team"
+                },
+                "attribute": {
+                    "value": "The current standings for teams in the 2024 season are: 1. Mercedes, 2. Red Bull Racing, 3. Ferrari.",
+                    "task": "Retrieve team standings for the 2024 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "23",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are the latest standings for drivers and teams in the 2024 season.",
+                    "task": "Send the results to the user.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "24",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "What specific question do you have about the 2024 Formula 1 season?",
+                    "task": "Ask the user what specific topic or question they have about the 2024 Formula 1 season (e.g., race schedules, driver stats, team information).",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "25",
+            {
+                "resource": {
+                    "id": "f1-rag-worker-001",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the FaissRAGWorker to retrieve specific information based on the user's inquiry regarding the 2024 Formula 1 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "26",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "The next race in the 2024 Formula 1 season is the Australian Grand Prix on March 17, 2024.",
+                    "task": "Provide the user with the information or answer to their question about the 2024 Formula 1 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "27",
+            {
+                "resource": {
+                    "id": "f1-message-worker-001",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any follow-up questions or is there anything else you would like to know about Formula 1?",
+                    "task": "Ask if the user has any follow-up questions or if there is anything else related to Formula 1 they would like to know.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "28",
+            {
+                "resource": {
+                    "id": "f1-rag-worker-001",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Sure! I can tell you about the drivers or teams. What would you like to know?",
+                    "task": "Respond to any additional queries from the user, providing relevant information or navigating them to different topics related to the 2024 Formula 1 season.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "User wants information about upcoming races",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "1",
+            "2",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "2",
+            "3",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "6",
+            {
+                "intent": "User wants to know statistics of a specific driver",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "6",
+            "7",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "11",
+            {
+                "intent": "User wants details about a specific team",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "11",
+            "12",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "12",
+            "13",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "13",
+            "14",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "14",
+            "15",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "16",
+            {
+                "intent": "User inquires about race results",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "16",
+            "17",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "17",
+            "18",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "18",
+            "19",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "19",
+            "20",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "21",
+            {
+                "intent": "User wants to check driver and team standings",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "21",
+            "22",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "22",
+            "23",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "24",
+            {
+                "intent": "User has general questions about Formula 1",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "24",
+            "25",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "25",
+            "26",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "26",
+            "27",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "27",
+            "28",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "formula 1 assistant for 2024 formula 1 season",
+    "user_objective": "The Formula 1 assistant helps users explore information about races, drivers, teams, and standings in the 2024 formula 1 season. It can answer questions related to race schedules, driver stats, team info, and race results in 2024 Formula 1 season",
+    "builder_objective": "The assistant should provide helpful follow-up questions or offer additional race or driver suggestions based on the user's interest.",
+    "domain": "Formula 1 Racing",
+    "intro": "Welcome to the Formula 1 Assistant! Here you can explore the world of F1\u2014races, drivers, teams, and results. Whether you're tracking your favorite driver's progress or learning about upcoming Grand Prix events, I\u2019m here to help you stay updated and engaged with the sport.",
+    "task_docs": [
+        {
+            "source": "https://en.wikipedia.org/wiki/2024_Formula_One_World_Championship",
+            "num": 20
+        },
+        {
+            "source": "https://www.formula1.com/en/results/2024/races",
+            "num": 20
+        },
+        {
+            "source": "https://www.formula1.com/en/results/2024/drivers",
+            "num": 20
+        },
+        {
+            "source": "https://www.formula1.com/en/results/2024/team",
+            "num": 20
+        }
+    ],
+    "rag_docs": [
+        {
+            "source": "https://en.wikipedia.org/wiki/2024_Formula_One_World_Championship",
+            "num": 20
+        },
+        {
+            "source": "https://www.formula1.com/en/results/2024/races",
+            "num": 20
+        },
+        {
+            "source": "https://www.formula1.com/en/results/2024/drivers",
+            "num": 20
+        },
+        {
+            "source": "https://www.formula1.com/en/results/2024/team",
+            "num": 20
+        }
+    ],
+    "tasks": [],
+    "workers": [
+        {
+            "id": "f1-message-worker-001",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+        },
+        {
+            "id": "f1-db-worker-001",
+            "name": "DataBaseWorker",
+            "path": "f1_database_worker.py"
+        },
+        {
+            "id": "f1-default-worker-001",
+            "name": "DefaultWorker",
+            "path": "default_worker.py"
+        },
+        {
+            "id": "f1-rag-worker-001",
+            "name": "FaissRAGWorker",
+            "path": "faiss_rag_worker.py"
+        }
+    ],
+    "tools": [
+        {
+            "id": "f1-search-race-001",
+            "name": "search_race",
+            "path": "f1_db/search_race.py"
+        },
+        {
+            "id": "f1-search-team-001",
+            "name": "search_team",
+            "path": "f1_db/search_team.py"
+        },
+        {
+            "id": "f1-search-driver-001",
+            "name": "search_driver",
+            "path": "f1_db/search_driver.py"
+        }
+    ],
+    "nluapi": "",
+    "slotfillapi": ""
+}
